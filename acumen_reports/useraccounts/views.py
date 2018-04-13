@@ -41,3 +41,7 @@ class ListAllProjects(views.TemplateView):
 class ListAllReports(views.TemplateView):
 	template_name = "useraccounts/list-all-reports.html"
 	pass
+
+class UserSettings(views.TemplateView):
+	template_name = "useraccounts/user-settings.html"
+	pass

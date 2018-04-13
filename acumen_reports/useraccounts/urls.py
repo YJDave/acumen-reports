@@ -10,6 +10,7 @@ from .views import (
 	AddProfile,
 	ListAllProjects,
 	ListAllReports,
+	UserSettings,
 )
 
 from analytics.views import (
@@ -42,5 +43,6 @@ urlpatterns = [
     url(r'^(?P<user_name>\w+)/$', UserDashboard.as_view(), name='user_dashboard'),
     url(r'^(?P<user_name>\w+)/projects/$', ListAllProjects.as_view(), name='all_projects'),
     url(r'^(?P<user_name>\w+)/reports/$', ListAllReports.as_view(), name='all_reports'),
+    url(r'^(?P<user_name>\w+)/settings/$', UserSettings.as_view(), name='user_settings'),
     url(r'^(?P<user_name>\w+)/(?P<proj_id>\d+)/', include(project_urls)),
 ]
