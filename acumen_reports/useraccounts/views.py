@@ -33,3 +33,11 @@ class ProjectReports(views.TemplateView):
 class AddProfile(views.TemplateView):
 	template_name = "useraccounts/add-profile.html"
 	pass
+
+class ListAllProjects(views.TemplateView):
+	template_name = "useraccounts/list-all-projects.html"
+	pass
+
+class ListAllReports(views.TemplateView):
+	template_name = "useraccounts/list-all-reports.html"
+	pass

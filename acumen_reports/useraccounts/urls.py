@@ -8,6 +8,8 @@ from .views import (
 	ProfileSettings,
 	ProjectReports,
 	AddProfile,
+	ListAllProjects,
+	ListAllReports,
 )
 
 from analytics.views import (
@@ -38,5 +40,7 @@ project_urls = [
 urlpatterns = [
     url(r'^$', HomePage.as_view(), name='home'),
     url(r'^(?P<user_name>\w+)/$', UserDashboard.as_view(), name='user_dashboard'),
+    url(r'^(?P<user_name>\w+)/projects/$', ListAllProjects.as_view(), name='all_projects'),
+    url(r'^(?P<user_name>\w+)/reports/$', ListAllReports.as_view(), name='all_reports'),
     url(r'^(?P<user_name>\w+)/(?P<proj_id>\d+)/', include(project_urls)),
 ]
