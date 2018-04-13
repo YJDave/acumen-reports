@@ -28,12 +28,21 @@
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
         	<!-- TODO: Add icons for other tabs. -->
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link is-active" href="">Projects</a>
-          <a class="mdl-navigation__link" href="">Reports</a>
-          <a class="mdl-navigation__link" href="">Settings</a>
+        	<!-- FIX: Change "Current updates" to proper word -->
+        	<!-- FIX: Decide proper order or tabs  -->
+          <a class="mdl-navigation__link is-active" href="/user_id/">Current updates</a>
+          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link is-active" href="/user_id/projects/">Projects</a>
+          <a class="mdl-navigation__link" href="/user_id/reports/">Reports</a>
+          <a class="mdl-navigation__link" href="/user_id/settings/">Settings</a>
           <a class="mdl-navigation__link" href="">Logout</a>
         </nav>
       </div>
 {% endblock %}
 
+{% block main_content %}
+    <div class="mdl-grid sub-content">
+	{% block sub_content %}
+	{% endblock %}
+	</div>
+{% endblock %}
