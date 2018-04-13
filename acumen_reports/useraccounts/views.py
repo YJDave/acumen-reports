@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import views
 
 class HomePage(views.TemplateView):
-	template_name = 'useraccounts/home.html'
+	template_name = 'base.html'
 	pass
 
 class UserDashboard(views.TemplateView):

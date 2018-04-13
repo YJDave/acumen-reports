@@ -1,0 +1,73 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 	Add dependecies here -->
+	<link rel="stylesheet" href='{% static "mdl/material.min.css" %}'>
+	<script src='{% static "mdl/material.min.js" %}'></script>
+	<link rel="stylesheet" href='{% static "mdl/material-icons.css" %}'></head>
+<body>
+	<!-- ========Navbar content========== -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <header class="mdl-layout__header">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title">Acumen Automated Reports</span>
+
+	      <!-- TODO: Float this buttons to right. -->
+	      <!-- TODO: Change button style to match background. -->
+	      <!-- TODO: Open modal of sign in, sign up on click event. -->
+	      <!-- TODO: Change button text, according to user is logged in or not. If logged in change
+	            it to logout. -->
+	      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Sign up</button>
+	      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Sign in</button>
+	    </div>
+
+	    <!-- Tabs -->
+	    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+	      <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Home</a>
+	      <a href="#scroll-tab-2" class="mdl-layout__tab">Plans</a>
+	      <a href="#scroll-tab-3" class="mdl-layout__tab">Technology</a>
+	      <a href="#scroll-tab-4" class="mdl-layout__tab">Contact Us</a>
+	    </div>
+	  </header>
+	  <main class="mdl-layout__content">
+	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	  </main>
+	</div>
+
+	{% block main_content %}
+	{% endblock %}
+
+	<!-- ========Footbar content======= -->
+	<!-- FIX: Footbar is not showing! -->
+
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	  <main class="mdl-layout__content">
+	    <footer class="mdl-mini-footer">
+	        <div class="mdl-mini-footer__left-section">
+	            <div class="mdl-logo">Simple portfolio website</div>
+	        </div>
+	        <div class="mdl-mini-footer__right-section">
+	            <ul class="mdl-mini-footer__link-list">
+	                <li><a href="#">Help</a></li>
+	                <li><a href="#">Privacy & Terms</a></li>
+	            </ul>
+	        </div>
+	    </footer>
+	  </main>
+	</div>
+</body>
+</html>
