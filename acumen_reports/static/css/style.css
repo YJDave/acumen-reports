@@ -12,6 +12,13 @@
 	margin: 10px;
 }
 
+.mdl-mini-footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;   /* Height of the footer */
+}
+
 .acumen-header {
 	font-size: 30px;
 	margin-top: 5px;
@@ -26,4 +33,17 @@
 
 .sub-content {
 	margin-left: 240px;
+}
+
+.demo-card-wide {
+	margin: 20px;
+	width: 490px;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
