@@ -1,0 +1,26 @@
+
+
+/* User dashboard */
+
+.demo-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.demo-drawer-header {
+	margin: 10px;
+}
+
+.acumen-header {
+	font-size: 30px;
+	margin-top: 5px;
+	padding-bottom: 20px;
+}
+
+.demo-navigation {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+

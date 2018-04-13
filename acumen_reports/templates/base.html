@@ -7,8 +7,10 @@
 	<link rel="stylesheet" href='{% static "mdl/material.min.css" %}'>
 	<script src='{% static "mdl/material.min.js" %}'></script>
 	<link rel="stylesheet" href='{% static "mdl/material-icons.css" %}'></head>
+	<link rel="stylesheet" href='{% static "css/style.css" %}'></head>
 <body>
 	<!-- ========Navbar content========== -->
+	{% block usersignin %}
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 	  <header class="mdl-layout__header">
 	    <div class="mdl-layout__header-row">
@@ -32,6 +34,7 @@
 	      <a href="#scroll-tab-4" class="mdl-layout__tab">Contact Us</a>
 	    </div>
 	  </header>
+
 	  <main class="mdl-layout__content">
 	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
 	      <div class="page-content"><!-- Your content goes here --></div>
@@ -45,6 +48,7 @@
 	    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
 	      <div class="page-content"><!-- Your content goes here --></div>
 	    </section>
+    {% endblock %}
 
 	{% block main_content %}
 	{% endblock %}
