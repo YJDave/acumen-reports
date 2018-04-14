@@ -1,10 +1,50 @@
 {% extends 'base-dashboard.html' %}
 
 {% block sub_content %}
+	<!-- FIX: Improve dropdown fields -->
+	<!-- FIX: Width of navbar. -->
+
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
       <a href="/user_id/reports/" class="mdl-layout__tab">Reports</a>
       <a href="/user_id/reports/history/" class="mdl-layout__tab">History</a>
       <a href="/user_id/reports/create/" class="mdl-layout__tab is-active">Add new report</a>
     </div>
-	<h2>Create report</h2>
+
+    <form action="#">
+	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+	    <input class="mdl-textfield__input" type="text" id="name">
+	    <label class="mdl-textfield__label" for="name">Name</label>
+	  </div>
+	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+  	    <textarea class="mdl-textfield__input" type="text" id="description"></textarea>
+	    <label class="mdl-textfield__label" for="description">Description</label>
+	  </div>
+	  <div class="mdl-js-dropdown" style="width: 100%;">
+	    <label class="label" for="project">Project</label>
+	    <select id="project">
+	    	<option>1</option>
+	    </select>
+	  </div>
+	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+  	    <textarea class="mdl-textfield__input" type="text" id="emails"></textarea>
+	    <label class="mdl-textfield__label" for="emails">Emails to send</label>
+	  </div>
+	  <div class="mdl-js-dropdown" style="width: 100%;">
+	    <label class="label" for="type">Type</label>
+	    <select id="type">
+	    	<option>1</option>
+	    </select>
+	  </div>
+	  <div class="mdl-js-dropdown" style="width: 100%;">
+	    <label class="label" for="timeline">Repeat perid</label>
+	    <select id="timeline">
+	    	<option>1</option>
+	    </select>
+	  </div>
+	  <br />
+	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	  Create
+		</button>
+	</form>
+
 {% endblock %}
