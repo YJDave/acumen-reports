@@ -53,3 +53,7 @@ class ReportDashboard(views.TemplateView):
 class ReportsHistory(views.TemplateView):
 	template_name = "useraccounts/report-history.html"
 	pass
+
+class CreateReport(views.TemplateView):
+	template_name = "useraccounts/report-create.html"
+	pass
