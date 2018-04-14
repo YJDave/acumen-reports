@@ -48,3 +48,8 @@ class UserSettings(views.TemplateView):
 
 class ReportDashboard(views.TemplateView):
 	template_name = "useraccounts/report.html"
+	pass
+
+class ReportsHistory(views.TemplateView):
+	template_name = "useraccounts/report-history.html"
+	pass

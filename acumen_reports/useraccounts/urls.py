@@ -12,6 +12,7 @@ from .views import (
 	ListAllReports,
 	UserSettings,
 	ReportDashboard,
+	ReportsHistory,
 )
 
 from analytics.views import (
@@ -35,7 +36,6 @@ project_urls = [
 
     url(r'^settings/$', ProjectSettings.as_view(), name='project_settings'),
     url(r'^reports/$', ProjectReports.as_view(), name='project_reports'),
-    url(r'^reports/(?P<report_id>\d+)/', ReportDashboard.as_view(), name='report_dashboard'),
 
     url(r'^(?P<profile_id>\d+)/', include(profile_urls)),
 ]
@@ -45,6 +45,8 @@ urlpatterns = [
     url(r'^(?P<user_name>\w+)/$', UserDashboard.as_view(), name='user_dashboard'),
     url(r'^(?P<user_name>\w+)/projects/$', ListAllProjects.as_view(), name='all_projects'),
     url(r'^(?P<user_name>\w+)/reports/$', ListAllReports.as_view(), name='all_reports'),
+    url(r'^(?P<user_name>\w+)/reports/history/$', ReportsHistory.as_view(), name='report_history'),
+    url(r'^(?P<user_name>\w+)/reports/(?P<report_id>\d+)/', ReportDashboard.as_view(), name='report_dashboard'),
     url(r'^(?P<user_name>\w+)/settings/$', UserSettings.as_view(), name='user_settings'),
     url(r'^(?P<user_name>\w+)/(?P<proj_id>\d+)/', include(project_urls)),
 ]
