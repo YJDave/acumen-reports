@@ -1,5 +1,44 @@
 {% extends 'base-dashboard.html' %}
 
 {% block sub_content %}
-	<h2>Report history</h2>
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+      <a href="/user_id/reports/" class="mdl-layout__tab">Reports</a>
+      <a href="/user_id/reports/history/" class="mdl-layout__tab is-active">History</a>
+      <a href="" class="mdl-layout__tab">Add new report</a>
+    </div>
+
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+	  <thead>
+	    <tr>
+	      <th class="mdl-data-table__cell">No</th>
+	      <th>Date</th>
+	      <th>Report name</th>
+	      <th>Report type</th>
+	      <th>Send to</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td class="mdl-data-table__cell">1</td>
+	      <td>25/12/2001</td>
+	      <td>Report to admins</td>
+	      <td>Weekly</td>
+	      <td>asdl@adslf.com, ewqr@gmail.com</td>
+	    </tr>
+	    <tr>
+	      <td class="mdl-data-table__cell">1</td>
+	      <td>25/12/2001</td>
+	      <td>Report to admins</td>
+	      <td>Weekly</td>
+	      <td>asdl@adslf.com, ewqr@gmail.com</td>
+	    </tr>
+	    <tr>
+	      <td class="mdl-data-table__cell">1</td>
+	      <td>25/12/2001</td>
+	      <td>Report to admins</td>
+	      <td>Weekly</td>
+	      <td>asdl@adslf.com, ewqr@gmail.com</td>
+	    </tr>
+	  </tbody>
+	</table>
 {% endblock %}
