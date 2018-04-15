@@ -1,24 +1,30 @@
 #signup {
 	margin-right: 10px;
 }
-
-/* User dashboard */
-
-.demo-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
-.demo-drawer-header {
-	margin: 10px;
+a {
+	text-decoration: none;
 }
 
-.mdl-mini-footer {
-	position:absolute;
-	bottom:0;
-	width:99%;
-	height:20px;   /* Height of the footer */
+#add-btn {
+      position: sticky;
+      display: block;
+      right: 0;
+      bottom: 20px;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+      background-color: gray;
+}
+
+/* Side navigation bar  */
+
+.demo-drawer {
+  border: none;
+  height: 86.8%;
 }
 
 .acumen-header {
@@ -27,14 +33,59 @@
 	padding-bottom: 20px;
 }
 
+.demo-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.demo-avatar-dropdown {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
 .demo-navigation {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.sub-content {
-	margin-left: 240px;
+.demo-layout .demo-navigation .mdl-navigation__link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+
+.demo-layout .demo-navigation .mdl-navigation__link:hover {
+  background-color: #00BCD4;
+  color: #37474F;
+}
+
+.demo-navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+
+.demo-drawer-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  height: 151px;
+}
+
+/* Main Content */
+
+/* Report Create */
+.demo-content {
+  max-width: 1080px;
 }
 
 .demo-card-wide {
@@ -44,8 +95,33 @@
 
 .demo-card-wide > .mdl-card__title {
   color: #fff;
-  height: 176px;
+  height: auto;
+  background-color:#37474F;
+  font-weight: 500;
 }
+
 .demo-card-wide > .mdl-card__menu {
-  color: #fff;
+  color: #000;
+}
+
+/* User Settings*/
+.profile-section{
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
+.profile-section .mdl-textfield__input{
+		font-size: 20px ;
+
+	}
+
+.profile-section .mdl-textfield__label{
+	font-size: 20px;
+}
+/* Footer */
+.mdl-mini-footer {
+	position: absolute;
+	bottom:0;
+	width:97%;
+	height:20px;   /* Height of the footer */
 }

@@ -1,5 +1,42 @@
 {% extends 'base-dashboard.html' %}
-
 {% block sub_content %}
-	<h2>User specific settings</h2>
+	<section class="profile-section section--center mdl-grid mdl-shadow--24dp">
+		<div class="mdl-cell mdl-cell--12-col">
+			<h2>Profile</h2>
+			<form action="#" class="">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" pattern="[A-Z,a-z,0-9]*" type="text" id="usermame" value="doejohn1">
+					<label class="mdl-textfield__label" for="username">Username</label>
+					<span class="mdl-textfield__error">Letters and Numbers only, no spaces</span>
+				</div>
+				<br />
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" value="John Doe">
+					<label class="mdl-textfield__label" for="Name">Full Name</label>
+					<span class="mdl-textfield__error">Letters and spaces only</span>
+				</div>
+				<br />
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="Email" value="john.doe@example.com">
+					<label class="mdl-textfield__label" for="Email">Email address</label>
+				</div>
+				<br />
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" pattern="[0-9,+]*" type="text" id="Phone" value='+1234567890'>
+					<label class="mdl-textfield__label" for="Phone">Phone number</label>
+					<span class="mdl-textfield__error">Number and '+' only</span>
+				</div>
+				<br />
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="password" id="pwd" value='jon@123'>
+					<label class="mdl-textfield__label" for="Phone">Password</label>
+				</div>
+				<br />
+				<p>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--blue-grey-400" type="submit">Edit
+					</button>
+				</p>
+			</form>
+		</div>
+	</section>
 {% endblock %}

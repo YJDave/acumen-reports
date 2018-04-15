@@ -10,7 +10,7 @@
 		<body>
 			<!-- ========Navbar content========== -->
 			{% block usersignin %}
-				<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+				<div class="wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
 					<header class="mdl-layout__header  mdl-color--grey-600 mdl-color-text--grey-100">
 						<div class="mdl-layout__header-row">
 							<!-- Title -->
@@ -42,21 +42,22 @@
 							<div class="page-content"><!-- Your content goes here --></div>
 						</section>
 					{% endblock %}
+					
 					{% block main_content %}
 					{% endblock %}
 					<!-- ========Footbar content======= -->
-					<footer class="mdl-mini-footer">
-						<div class="mdl-mini-footer__left-section">
-							<div class="mdl-logo">Acumen reports</div>
-						</div>
-						<div class="mdl-mini-footer__right-section">
-							<ul class="mdl-mini-footer__link-list">
-								<li><a href="#">Help</a></li>
-								<li><a href="#">Privacy & Terms</a></li>
-							</ul>
-						</div>
-					</footer>
-				</main>
+						<footer class="mdl-mini-footer">
+							<div class="mdl-mini-footer__left-section">
+								<div class="mdl-logo">Acumen reports</div>
+							</div>
+							<div class="mdl-mini-footer__right-section">
+								<ul class="mdl-mini-footer__link-list">
+									<li><a href="#">Help</a></li>
+									<li><a href="#">Privacy & Terms</a></li>
+								</ul>
+							</div>
+						</footer>
+					</main>
 			</div>
 		</body>
 	</html>

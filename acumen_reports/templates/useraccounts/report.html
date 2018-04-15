@@ -2,107 +2,103 @@
 
 {% block sub_content %}
 	<!-- FIX: Weird errors with navbar -->
-
-<div class="mdl-layout mdl-js-layout">
-   	<header class="mdl-layout__header">
-	    <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
-      <a href="#report" class="mdl-layout__tab is-active">Report</a>
-      <a href="#details" class="mdl-layout__tab">Details</a>
-      <a href="#history" class="mdl-layout__tab">History</a>
-      <a href="#settings" class="mdl-layout__tab">Settings</a>
-    </div>
-	
-	</header>
-
-    <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="report">
-      <div class="page-content">
-      	<h2>Report chart</h2>
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Generate now!</button>
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Download</button>
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Mail to</button>
-      </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="history">
-      <div class="page-content">
-  	    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-		  <thead>
-		    <tr>
-		      <th class="mdl-data-table__cell">No</th>
-		      <th>Date</th>
-		      <th>Send to</th>
-		    </tr>
-		  </thead>
-		  <tbody>
-		    <tr>
-		      <td class="mdl-data-table__cell">1</td>
-		      <td>25/12/2001</td>
-		      <td>asdl@adslf.com, ewqr@gmail.com</td>
-		    </tr>
-		    <tr>
-		      <td class="mdl-data-table__cell">1</td>
-		      <td>25/12/2001</td>
-		      <td>asdl@adslf.com, ewqr@gmail.com</td>
-		    </tr>
-		    <tr>
-		      <td class="mdl-data-table__cell">1</td>
-		      <td>25/12/2001</td>
-		      <td>asdl@adslf.com, ewqr@gmail.com</td>
-		    </tr>
-		  </tbody>
-		</table>
-      </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="details">
-      <div class="page-content">
-		<h2>Google Analytics Everyday Report</h2>
-		<h5>Description of report, etc. etc.</h5>
-		<h5>Project XYZ</h5>
-		<h5>Created on 4th March, 2018 by user XYZ</h5>
-		<h5>Emails to send: asdcm@gmail.com, asdflk@gmail.com</h5>
-      </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="settings">
-      <div class="page-content">
-    <form action="#">
-	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
-	    <input class="mdl-textfield__input" type="text" id="name" value="Google Analytics Everyday Report">
-	    <label class="mdl-textfield__label" for="name">Name</label>
-	  </div>
-	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
-  	    <textarea class="mdl-textfield__input" type="text" id="description">Description of report, etc. etc.</textarea>
-	    <label class="mdl-textfield__label" for="description">Description</label>
-	  </div>
-	  <div class="mdl-js-dropdown" style="width: 100%;">
-	    <label class="label" for="project">Project</label>
-	    <select id="project">
-	    	<option>1</option>
-	    </select>
-	  </div>
-	  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
-  	    <textarea class="mdl-textfield__input" type="text" id="emails">asdcm@gmail.com, asdflk@gmail.com</textarea>
-	    <label class="mdl-textfield__label" for="emails">Emails to send</label>
-	  </div>
-	  <div class="mdl-js-dropdown" style="width: 100%;">
-	    <label class="label" for="type">Type</label>
-	    <select id="type">
-	    	<option>1</option>
-	    </select>
-	  </div>
-	  <div class="mdl-js-dropdown" style="width: 100%;">
-	    <label class="label" for="timeline">Repeat perid</label>
-	    <select id="timeline">
-	    	<option>1</option>
-	    </select>
-	  </div>
-	  <br />
-	  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-	  Update
-		</button>
-	</form>
-      </div>
-    </section>
-  </main>
-</div>
-
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect ">
+				<a href="#report" class="mdl-layout__tab is-active">Report</a>
+				<a href="#details" class="mdl-layout__tab">Details</a>
+				<a href="#history" class="mdl-layout__tab">History</a>
+				<a href="#settings" class="mdl-layout__tab">Settings</a>
+			</div>
+		</header>
+		<main class="mdl-layout__content">
+			<section class="mdl-layout__tab-panel is-active" id="report">
+				<div class="page-content">
+					<h2>Report chart</h2>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Generate now!</button>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Download</button>
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Mail to</button>
+				</div>
+			</section>
+			<section class="mdl-layout__tab-panel" id="history">
+				<div class="page-content">
+					<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+						<thead>
+							<tr>
+								<th class="mdl-data-table__cell">No</th>
+								<th>Date</th>
+								<th>Send to</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="mdl-data-table__cell">1</td>
+								<td>25/12/2001</td>
+								<td>asdl@adslf.com, ewqr@gmail.com</td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell">1</td>
+								<td>25/12/2001</td>
+								<td>asdl@adslf.com, ewqr@gmail.com</td>
+							</tr>
+							<tr>
+								<td class="mdl-data-table__cell">1</td>
+								<td>25/12/2001</td>
+								<td>asdl@adslf.com, ewqr@gmail.com</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<section class="mdl-layout__tab-panel" id="details">
+				<div class="page-content">
+					<h2>Google Analytics Everyday Report</h2>
+					<h5>Description of report, etc. etc.</h5>
+					<h5>Project XYZ</h5>
+					<h5>Created on 4th March, 2018 by user XYZ</h5>
+					<h5>Emails to send: asdcm@gmail.com, asdflk@gmail.com</h5>
+				</div>
+			</section>
+			<section class="mdl-layout__tab-panel" id="settings">
+				<div class="page-content">
+					<form action="#">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+							<input class="mdl-textfield__input" type="text" id="name" value="Google Analytics Everyday Report">
+							<label class="mdl-textfield__label" for="name">Name</label>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+							<textarea class="mdl-textfield__input" type="text" id="description">Description of report, etc. etc.</textarea>
+							<label class="mdl-textfield__label" for="description">Description</label>
+						</div>
+						<div class="mdl-js-dropdown" style="width: 100%;">
+							<label class="label" for="project">Project</label>
+							<select id="project">
+								<option>1</option>
+							</select>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+							<textarea class="mdl-textfield__input" type="text" id="emails">asdcm@gmail.com, asdflk@gmail.com</textarea>
+							<label class="mdl-textfield__label" for="emails">Emails to send</label>
+						</div>
+						<div class="mdl-js-dropdown" style="width: 100%;">
+							<label class="label" for="type">Type</label>
+							<select id="type">
+								<option>1</option>
+							</select>
+						</div>
+						<div class="mdl-js-dropdown" style="width: 100%;">
+							<label class="label" for="timeline">Repeat perid</label>
+							<select id="timeline">
+								<option>1</option>
+							</select>
+						</div>
+						<br />
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+						Update
+						</button>
+					</form>
+				</div>
+			</section>
+		</main>
+	</div>
 {% endblock %}

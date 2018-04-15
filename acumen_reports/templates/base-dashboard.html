@@ -1,49 +1,57 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
 {% block usersignin %}
-    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Home</span>
+  <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Home</span>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+          <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
+            <i class="material-icons">search</i>
+          </label>
+          <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" id="search">
+            <label class="mdl-textfield__label" for="search">Enter your query...</label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+      <header class="demo-drawer-header">
+        <div class="acumen-header">Acumen</div>
+        <img src='{% static "images/user.jpg" %}' class="demo-avatar">
+        <div class="demo-avatar-dropdown">
+          <span>hello@example.com</span>
+          <div class="mdl-layout-spacer"></div>
+          <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+          <i class="material-icons" role="presentation">arrow_drop_down</i>
+          <span class="visuallyhidden">Accounts</span>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+            <li class="mdl-menu__item">hello@example.com</li>
+            <li class="mdl-menu__item">info@example.com</li>
+            <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+          </ul>
         </div>
       </header>
-      <!-- TODO: Change color to match the home page style -->
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <div class="acumen-header">Acumen</div>
-          <img src='{% static "images/user.jpg" %}' class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>hello@example.com</span>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Accounts</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">hello@example.com</li>
-              <li class="mdl-menu__item">info@example.com</li>
-              <li class="mdl-menu__item"><i class="material-icons">add</i>Add account...</li>
-            </ul>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        	<!-- TODO: Add icons for other tabs. -->
-        	<!-- FIX: Change "Current updates" to proper word -->
-        	<!-- FIX: Decide proper order or tabs  -->
-          <a class="mdl-navigation__link is-active" href="/user_id/">Current updates</a>
-          <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link is-active" href="/user_id/projects/">Projects</a>
-          <a class="mdl-navigation__link" href="/user_id/reports/">Reports</a>
-          <a class="mdl-navigation__link" href="/user_id/settings/">Settings</a>
-          <a class="mdl-navigation__link" href="">Logout</a>
-        </nav>
+      <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+        <a class="mdl-navigation__link is-active" href="/user_id/"><i class="material-icons">flag</i>Recent Updates</a>
+        <a class="mdl-navigation__link" href="/"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+        <a class="mdl-navigation__link is-active" href="/user_id/projects/"><i class="material-icons">folder</i>Projects</a>
+        <a class="mdl-navigation__link" href="/user_id/reports/"><i class="material-icons">subject</i>Reports</a>
+        <a class="mdl-navigation__link" href="/user_id/settings/"><i class="material-icons">settings</i>Account Settings</a>
+        <!--         <div class="mdl-layout-spacer"></div>-->
+        <a class="mdl-navigation__link" href=""><i class="material-icons">power_settings_new</i>Logout</a>
+      </nav>
+    </div>
+  {% endblock %}
+  {% block main_content %}
+    <main class="mdl-layout__content mdl-color--grey-100">
+      <div class="mdl-grid demo-content">
+          {% block sub_content %}
+          {% endblock %}
+        </div>
       </div>
-{% endblock %}
-	</div>
-
-{% block main_content %}
-    <div class="mdl-grid sub-content">
-	{% block sub_content %}
-	{% endblock %}
-	</div>
-{% endblock %}
+    </main>
+      {% endblock %}
