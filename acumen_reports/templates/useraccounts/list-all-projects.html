@@ -1,17 +1,22 @@
 {% extends 'base-dashboard.html' %}
 {% block sub_content %}
-<!-- 	<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
- -->		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/projects/" class="mdl-layout__tab is-active">Projects</a>
+		<a href="/user_id/projects/create/" class="mdl-layout__tab ">Add new project</a>
+	</div>
+
+	<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project A</h2></a>
+				<a href="/user_id/1/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project A</h2></a>
 			</div>
 			<div class="mdl-card__menu">
 				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="btn1">
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
@@ -32,7 +37,7 @@
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project B</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project B</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -53,15 +58,15 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project C</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project C</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -82,15 +87,15 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project D</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project D</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -111,15 +116,15 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn4">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project E</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project E</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -140,15 +145,15 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn5">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project F</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project F</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -169,15 +174,15 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn6">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project G</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project G</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -198,15 +203,15 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn7">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
-				<a href="#"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project H</h2></a>
+				<a href="/user_id/10/"><h2 class="mdl-card__title-text mdl-color-text--blue-grey-400">Project H</h2></a>
 			</div>
 			<div class="mdl-card__actions">
 				<button type="button" class="mdl-chip">
@@ -227,14 +232,11 @@
 				<i class="material-icons">more_vert</i>
 				</button>
 				<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn8">
-					<li class="mdl-menu__item">Settings</li>
-					<li class="mdl-menu__item">All Reports</li>
+					<a href="/user_id/10/settings/"><li class="mdl-menu__item">Settings</li></a>
+					<a href="/user_id/10/reports/"><li class="mdl-menu__item">All Reports</li></a>
 					<li class="mdl-menu__item">Delete</li>
 				</ul>
 			</div>
 		</div>
-		<button id="add-btn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-		<i class="material-icons">add</i>
-		</button>
-<!-- 	</section>
- -->{% endblock %}
+	</section>
+{% endblock %}

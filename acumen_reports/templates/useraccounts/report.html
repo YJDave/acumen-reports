@@ -1,20 +1,22 @@
 {% extends 'base-dashboard.html' %}
-
+{% load staticfiles %}
 {% block sub_content %}
 	<!-- FIX: Weird errors with navbar -->
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
-		<header class="mdl-layout__header">
-			<div class="mdl-layout__tab-bar mdl-js-ripple-effect ">
+	<div class="mdl-layout mdl-js-layout mdl-layout__fixed-header">
+		<header class="report-section mdl-layout__header">
+			<div class="report-section mdl-layout__tab-bar mdl-js-ripple-effect ">
 				<a href="#report" class="mdl-layout__tab is-active">Report</a>
 				<a href="#details" class="mdl-layout__tab">Details</a>
 				<a href="#history" class="mdl-layout__tab">History</a>
-				<a href="#settings" class="mdl-layout__tab">Settings</a>
+				<a href="#settings" class="mdl-layout__tab ">Settings</a>
 			</div>
 		</header>
 		<main class="mdl-layout__content">
 			<section class="mdl-layout__tab-panel is-active" id="report">
-				<div class="page-content">
+				<div class="page-content" style="text-align: center;">
 					<h2>Report chart</h2>
+					<div><img src="{% static 'images/img-1.png' %}"/></div>
+					<br />
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Generate now!</button>
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Download</button>
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Mail to</button>
@@ -59,42 +61,60 @@
 					<h5>Emails to send: asdcm@gmail.com, asdflk@gmail.com</h5>
 				</div>
 			</section>
-			<section class="mdl-layout__tab-panel" id="settings">
-				<div class="page-content">
-					<form action="#">
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+			<section class="mdl-layout__tab-panel profile-section section--center mdl-grid mdl-shadow--24dp" id="settings">
+				<div class="page-content mdl-cell mdl-cell--12-col">
+					<h2>Report Settings</h2>
+					<form action="#" class="report-settings">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 							<input class="mdl-textfield__input" type="text" id="name" value="Google Analytics Everyday Report">
 							<label class="mdl-textfield__label" for="name">Name</label>
 						</div>
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 							<textarea class="mdl-textfield__input" type="text" id="description">Description of report, etc. etc.</textarea>
 							<label class="mdl-textfield__label" for="description">Description</label>
 						</div>
-						<div class="mdl-js-dropdown" style="width: 100%;">
-							<label class="label" for="project">Project</label>
-							<select id="project">
-								<option>1</option>
-							</select>
-						</div>
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 							<textarea class="mdl-textfield__input" type="text" id="emails">asdcm@gmail.com, asdflk@gmail.com</textarea>
 							<label class="mdl-textfield__label" for="emails">Emails to send</label>
 						</div>
-						<div class="mdl-js-dropdown" style="width: 100%;">
-							<label class="label" for="type">Type</label>
-							<select id="type">
-								<option>1</option>
-							</select>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+							<input type="text" value="" class="mdl-textfield__input" id="project" readonly>
+							<input type="hidden" value="" name="project">
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+							<label for="project" class="mdl-textfield__label">Project</label>
+							<ul for="project" class="mdl-menu mdl-menu--top-left mdl-js-menu">
+								<li class="mdl-menu__item" data-val="1" data-selected="true">1</li>
+								<li class="mdl-menu__item" data-val="2">2</li>
+							</ul>
 						</div>
-						<div class="mdl-js-dropdown" style="width: 100%;">
-							<label class="label" for="timeline">Repeat perid</label>
-							<select id="timeline">
-								<option>1</option>
-							</select>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+							<input type="text" value="" class="mdl-textfield__input" id="type" readonly>
+							<input type="hidden" value="" name="type">
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+							<label for="type" class="mdl-textfield__label">Type</label>
+							<ul for="type" class="mdl-menu mdl-menu--top-left mdl-js-menu">
+								<li class="mdl-menu__item" data-val="1" data-selected="true">1</li>
+								<li class="mdl-menu__item" data-val="2">2</li>
+							</ul>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+							<input type="text" value="" class="mdl-textfield__input" id="timeline" readonly>
+							<input type="hidden" value="" name="timeline">
+							<i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+							<label for="timeline" class="mdl-textfield__label">Repeat Period</label>
+							<ul for="timeline" class="mdl-menu mdl-menu--top-left mdl-js-menu">
+								<li class="mdl-menu__item" data-val="30" data-selected="true">1 month</li>
+								<li class="mdl-menu__item" data-val="15">15 days</li>
+								<li class="mdl-menu__item" data-val="7">7 days</li>
+								<li class="mdl-menu__item" data-val="1">Daily</li>
+							</ul>
 						</div>
 						<br />
 						<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 						Update
+						</button>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--red-800 mdl-color-text--white">
+						Delete
 						</button>
 					</form>
 				</div>

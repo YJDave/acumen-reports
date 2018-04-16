@@ -1,36 +1,38 @@
 from django.conf.urls import url, include
 from .views import (
-	HomePage,
-	UserDashboard,
-	ProjectDashboard,
-	ProjectProfileDashboard,
-	ProjectSettings,
-	ProfileSettings,
-	ProjectReports,
-	AddProfile,
-	ListAllProjects,
-	ListAllReports,
-	UserSettings,
-	ReportDashboard,
-	ReportsHistory,
-	CreateReport,
+    HomePage,
+    UserDashboard,
+    ProjectDashboard,
+    ProjectProfileDashboard,
+    ProjectSettings,
+    ProfileSettings,
+    ProjectReports,
+    AddProfile,
+    ListAllProjects,
+    ListAllReports,
+    UserSettings,
+    ReportDashboard,
+    ReportsHistory,
+    CreateReport,
+    CreateProject
 )
 
 from analytics.views import (
-	AnalyticsSetup,
+    AnalyticsSetup,
 )
 
 analytics_urls = [
-	url(r'^setup/$', AnalyticsSetup.as_view(), name='analytics_setup'),
+    url(r'^setup/$', AnalyticsSetup.as_view(), name='analytics_setup'),
 ]
 
 profile_urls = [
-    url(r'^$', ProjectProfileDashboard.as_view(), name='project_profile_dashboard'),
+    url(r'^$', ProjectProfileDashboard.as_view(),
+        name='project_profile_dashboard'),
     url(r'^settings/$', ProfileSettings.as_view(), name='profile_settings'),
 ]
 
 project_urls = [
-	url(r'^$', ProjectDashboard.as_view(), name='project_dashboard'),
+    url(r'^$', ProjectDashboard.as_view(), name='project_dashboard'),
 
     url(r'^add/$', AddProfile.as_view(), name='add_profile'),
     url(r'^add/analytics/', include(analytics_urls)),
@@ -43,12 +45,22 @@ project_urls = [
 
 urlpatterns = [
     url(r'^$', HomePage.as_view(), name='home'),
-    url(r'^(?P<user_name>\w+)/$', UserDashboard.as_view(), name='user_dashboard'),
-    url(r'^(?P<user_name>\w+)/projects/$', ListAllProjects.as_view(), name='all_projects'),
-    url(r'^(?P<user_name>\w+)/reports/$', ListAllReports.as_view(), name='all_reports'),
-    url(r'^(?P<user_name>\w+)/reports/history/$', ReportsHistory.as_view(), name='report_history'),
-    url(r'^(?P<user_name>\w+)/reports/create/$', CreateReport.as_view(), name='create_report'),
-    url(r'^(?P<user_name>\w+)/reports/(?P<report_id>\d+)/', ReportDashboard.as_view(), name='report_dashboard'),
-    url(r'^(?P<user_name>\w+)/settings/$', UserSettings.as_view(), name='user_settings'),
+    url(r'^(?P<user_name>\w+)/$',
+        UserDashboard.as_view(), name='user_dashboard'),
+    url(r'^(?P<user_name>\w+)/projects/$',
+        ListAllProjects.as_view(), name='all_projects'),
+    url(r'^(?P<user_name>\w+)/projects/create/$',
+        CreateProject.as_view(), name='create_project'),
+    url(r'^(?P<user_name>\w+)/reports/$',
+        ListAllReports.as_view(), name='all_reports'),
+    url(r'^(?P<user_name>\w+)/reports/history/$',
+        ReportsHistory.as_view(), name='report_history'),
+    url(r'^(?P<user_name>\w+)/reports/create/$',
+        CreateReport.as_view(), name='create_report'),
+    url(r'^(?P<user_name>\w+)/reports/(?P<report_id>\d+)/',
+        ReportDashboard.as_view(), name='report_dashboard'),
+    url(r'^(?P<user_name>\w+)/settings/$',
+        UserSettings.as_view(), name='user_settings'),
+
     url(r'^(?P<user_name>\w+)/(?P<proj_id>\d+)/', include(project_urls)),
 ]

@@ -3,6 +3,7 @@
 }
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
+  background-color: pink; /* Keeping it for error-check */
 }
 
 a {
@@ -25,6 +26,7 @@ a {
 .demo-drawer {
   border: none;
   height: 86.8%;
+  width: auto;
 }
 
 .acumen-header {
@@ -111,13 +113,27 @@ a {
 	text-align: center;
 }
 .profile-section .mdl-textfield__input{
-		font-size: 20px ;
+		font-size: 18px ;
 
 	}
 
 .profile-section .mdl-textfield__label{
-	font-size: 20px;
+	font-size: 18px;
 }
+
+/* Projects */
+.project{
+  
+}
+/* Reports */
+.report-section{
+	background-color: #263338;
+ }
+
+.report-settings .mdl-textfield{
+ 	width: 100%;
+ }
+
 /* Footer */
 .mdl-mini-footer {
 	position: absolute;

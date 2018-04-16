@@ -7,6 +7,9 @@
 		<script src='{% static "mdl/material.min.js" %}'></script>
 		<link rel="stylesheet" href='{% static "mdl/material-icons.css" %}'></head>
 		<link rel="stylesheet" href='{% static "css/style.css" %}'></head>
+		<!-- getmdl-select for dropdown -->
+		<link rel="stylesheet" href='{% static "getmdl-select/getmdl-select.min.css"%}'>
+		<script defer src='{% static "getmdl-select/getmdl-select.min.js" %}'></script>
 		<body>
 			<!-- ========Navbar content========== -->
 			{% block usersignin %}
@@ -46,18 +49,18 @@
 					{% block main_content %}
 					{% endblock %}
 					<!-- ========Footbar content======= -->
-						<footer class="mdl-mini-footer">
-							<div class="mdl-mini-footer__left-section">
-								<div class="mdl-logo">Acumen reports</div>
-							</div>
-							<div class="mdl-mini-footer__right-section">
-								<ul class="mdl-mini-footer__link-list">
-									<li><a href="#">Help</a></li>
-									<li><a href="#">Privacy & Terms</a></li>
-								</ul>
-							</div>
-						</footer>
-					</main>
+					<footer class="mdl-mini-footer">
+						<div class="mdl-mini-footer__left-section">
+							<div class="mdl-logo">Acumen reports</div>
+						</div>
+						<div class="mdl-mini-footer__right-section">
+							<ul class="mdl-mini-footer__link-list">
+								<li><a href="#">Help</a></li>
+								<li><a href="#">Privacy & Terms</a></li>
+							</ul>
+						</div>
+					</footer>
+				</main>
 			</div>
 		</body>
 	</html>

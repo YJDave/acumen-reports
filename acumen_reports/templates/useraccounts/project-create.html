@@ -1,0 +1,30 @@
+{% extends 'base-dashboard.html' %}
+{% block sub_content %}
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/projects/" class="mdl-layout__tab">Projects</a>
+		<a href="/user_id/projects/create/" class="mdl-layout__tab is-active">Add new project</a>
+	</div>
+	<section class="section--center mdl-grid mdl-shadow--24dp profile-section">
+		<div class="page-content mdl-cell mdl-cell--12-col">
+			<h2>Create a new Project</h2>
+			<form action="#" class="project-settings">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+					<input class="mdl-textfield__input" type="text" id="name">
+					<label class="mdl-textfield__label" for="name">Project Name</label>
+				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+					<textarea class="mdl-textfield__input" type="text" id="description"></textarea>
+					<label class="mdl-textfield__label" for="description">Project Description</label>
+				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+					<textarea class="mdl-textfield__input" type="text" id="emails"></textarea>
+					<label class="mdl-textfield__label" for="emails">Emails to send</label>
+				</div>
+				<br />
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+				Create
+				</button>
+			</form>
+		</div>
+	</section>
+{% endblock %}
