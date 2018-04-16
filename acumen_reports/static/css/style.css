@@ -25,7 +25,6 @@ a {
 
 .demo-drawer {
   border: none;
-  height: 86.8%;
   width: auto;
 }
 
@@ -137,7 +136,9 @@ a {
 /* Footer */
 .mdl-mini-footer {
 	position: absolute;
+  top: 100%;
 	bottom:0;
-	width:97%;
+  /*left: 0;*/
+	width: 97.6%;
 	height:20px;   /* Height of the footer */
 }
