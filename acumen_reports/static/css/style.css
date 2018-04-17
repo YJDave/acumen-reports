@@ -107,6 +107,7 @@ a {
 
 /* User Settings*/
 .profile-section{
+  margin-top: 40px !important;
 	width: 50%;
 	margin: auto;
 	text-align: center;
@@ -133,6 +134,11 @@ a {
  	width: 100%;
  }
 
+ /* Profile */
+.profile-chips{
+  margin-left: 100px;
+/*  display: block*/
+}
 /* Footer */
 .mdl-mini-footer {
 	position: absolute;

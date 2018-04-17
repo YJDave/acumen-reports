@@ -1,1 +1,178 @@
-<h3>This is project dashboard.</h3>
+{% extends 'base-dashboard.html' %}
+{% load staticfiles %}
+{% block sub_content %}
+	<!-- FIX: Weird errors with navbar -->
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+		<div class="mdl-tabs__tab-bar">
+			<a href="#report" class="mdl-tabs__tab is-active">All Reports</a>
+			<a href="#details" class="mdl-tabs__tab">Details</a>
+			<a href="#history" class="mdl-tabs__tab">History</a>
+			<a href="#profile" class="mdl-tabs__tab">Profile</a>
+			<a href="#settings" class="mdl-tabs__tab ">Settings</a>
+		</div>
+		<div class="mdl-tabs__panel is-active" id="#report">
+			<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title" style="background-color: rgb(23,2,32);">
+						<h2 class="mdl-card__title-text">Google Analytics Everyday Report</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<h4 class="mdl-card__subtitle-text">Project XYZ</h4>
+						Description of report, etc. etc.
+					</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/user_id/reports/12">
+							<b>View</b>
+						</a>
+					</div>
+					<div class="mdl-card__menu">
+						<button style="color: #fff" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="btn1">
+						<i class="material-icons">more_vert</i>
+						</button>
+						<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+							<li class="mdl-menu__item">Details</li>
+							<li class="mdl-menu__item">Settings</li>
+							<li class="mdl-menu__item">Delete</li>
+						</ul>
+					</div>
+				</div>
+				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title" style="background-color: rgb(23,2,32);">
+						<h2 class="mdl-card__title-text">Google Analytics Everyday Report</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<h4 class="mdl-card__subtitle-text">Project XYZ</h4>
+						Description of report, etc. etc.
+					</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/user_id/reports/12">
+							<b>View</b>
+						</a>
+					</div>
+					<div class="mdl-card__menu">
+						<button style="color: #fff" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="btn1">
+						<i class="material-icons">more_vert</i>
+						</button>
+						<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+							<li class="mdl-menu__item">Details</li>
+							<li class="mdl-menu__item">Settings</li>
+							<li class="mdl-menu__item">Delete</li>
+						</ul>
+					</div>
+				</div>
+				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title" style="background-color: rgb(23,2,32);">
+						<h2 class="mdl-card__title-text">Google Analytics Everyday Report</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<h4 class="mdl-card__subtitle-text">Project XYZ</h4>
+						Description of report, etc. etc.
+					</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/user_id/reports/12">
+							<b>View</b>
+						</a>
+					</div>
+					<div class="mdl-card__menu">
+						<button style="color: #fff" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="btn1">
+						<i class="material-icons">more_vert</i>
+						</button>
+						<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+							<li class="mdl-menu__item">Details</li>
+							<li class="mdl-menu__item">Settings</li>
+							<li class="mdl-menu__item">Delete</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="mdl-tabs__panel" id="details">
+			<h2>XYZ Project</h2>
+			<h5>Description of project, etc. etc.</h5>
+			<h5>Created on 4th March, 2018 by user XYZ</h5>
+			<h5>Emails to send: asdcm@gmail.com, asdflk@gmail.com</h5>
+		</div>
+		<div class="mdl-tabs__panel " id="history">
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%">
+				<thead>
+					<tr>
+						<th class="mdl-data-table__cell">No</th>
+						<th>Date</th>
+						<th>Send to</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="mdl-data-table__cell">1</td>
+						<td>25/12/2001</td>
+						<td>asdl@adslf.com, ewqr@gmail.com</td>
+					</tr>
+					<tr>
+						<td class="mdl-data-table__cell">1</td>
+						<td>25/12/2001</td>
+						<td>asdl@adslf.com, ewqr@gmail.com</td>
+					</tr>
+					<tr>
+						<td class="mdl-data-table__cell">1</td>
+						<td>25/12/2001</td>
+						<td>asdl@adslf.com, ewqr@gmail.com</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="mdl-tabs__panel" id="profile">
+			<!-- 			<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+				-->				<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+					<img class="mdl-chip__contact" src='{% static "images/google-analytics-logo.png" %}' />
+					<span class="mdl-chip__text">Google Analytics</span>
+					<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+				</span>
+				<br />
+				<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+					<img class="mdl-chip__contact" src='{% static "images/google-logo.png" %}' />
+					<span class="mdl-chip__text">Google Search Console</span>
+					<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+				</span>
+				<br />
+				<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+					<img class="mdl-chip__contact" src='{% static "images/facebook-logo.png" %}' />
+					<span class="mdl-chip__text">Facebook Analytics</span>
+					<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+				</span>
+				<br />
+				<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+					<img class="mdl-chip__contact" src='{% static "images/twitter-logo.png" %}' />
+					<span class="mdl-chip__text">Twitter Analytics</span>
+					<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+				</span>
+				<br />
+				<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+					<img class="mdl-chip__contact" src='{% static "images/google-adwords-logo.png" %}' />
+					<span class="mdl-chip__text">Google AdWords</span>
+					<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+				</span>
+			<!-- 			</section>
+		-->		</div>
+		<div class="mdl-tabs__panel profile-section section--center mdl-grid mdl-shadow--24dp " id="settings">
+			<h2>Create a new Project</h2>
+			<form action="#" class="project-settings">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+					<input class="mdl-textfield__input" type="text" id="name">
+					<label class="mdl-textfield__label" for="name">Project Name</label>
+				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+					<textarea class="mdl-textfield__input" type="text" id="description"></textarea>
+					<label class="mdl-textfield__label" for="description">Project Description</label>
+				</div>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+					<textarea class="mdl-textfield__input" type="text" id="emails"></textarea>
+					<label class="mdl-textfield__label" for="emails">Emails to send</label>
+				</div>
+				<br />
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+				Create
+				</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}<h3>This is project dashboard.</h3>
