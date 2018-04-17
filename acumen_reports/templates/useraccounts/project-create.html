@@ -1,12 +1,10 @@
 {% extends 'base-dashboard.html' %}
 {% block sub_content %}
 	<!-- Return back to projects -->
-	<a href="/user_id/projects/" id="back" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-		<i class="material-icons">arrow_back</i>
-	</a>
-	<div class="mdl-tooltip" data-mdl-for="back">
-	Back to the <strong>projects</strong></div>
-
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/projects/" class="mdl-layout__tab">Projects</a>
+		<a href="/user_id/projects/create/" class="mdl-layout__tab  is-active">Add new project</a>
+	</div>
 	<!-- Create project form -->
 	<section class="section--center mdl-grid mdl-shadow--24dp profile-section">
 		<div class="page-content mdl-cell mdl-cell--12-col">

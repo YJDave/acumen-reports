@@ -1,4 +1,30 @@
 {% extends 'base-dashboard.html' %}
 {% block sub_content %}
-<h3>Project's settings</h3>
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/1/" class="mdl-layout__tab">All Reports</a>
+		<a href="#history" class="mdl-layout__tab">History</a>
+		<a href="/user_id/1/1/" class="mdl-layout__tab">Integration</a>
+		<a href="/user_id/1/settings/" class="mdl-layout__tab  is-active">Settings</a>
+	</div>
+	<div class="mdl-tabs__panel profile-section section--center mdl-grid mdl-shadow--24dp " id="settings">
+		<h2>Project Settings</h2>
+		<form action="#" class="project-settings">
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+				<input class="mdl-textfield__input" type="text" id="name" value="Project A">
+				<label class="mdl-textfield__label" for="name">Project Name</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+				<textarea class="mdl-textfield__input" type="text" id="description">lorem ipsum gobbleydook dooblygook</textarea>
+				<label class="mdl-textfield__label" for="description">Project Description</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width: 100%;">
+				<textarea class="mdl-textfield__input" type="text" id="emails">asdf@fasd.com, jj@oppoi.com</textarea>
+				<label class="mdl-textfield__label" for="emails">Default cc</label>
+			</div>
+			<br />
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+			Update
+			</button>
+		</form>
+	</div>
 {% endblock %}

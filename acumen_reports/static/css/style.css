@@ -137,7 +137,11 @@ a {
  /* Profile */
 .profile-chips{
   margin-left: 100px;
-/*  display: block*/
+  margin-bottom: 20px;
+}
+.profiles > .img {
+  width: 50px;
+  height: 50px;
 }
 /* Footer */
 .mdl-mini-footer {

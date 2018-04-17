@@ -1,5 +1,9 @@
 {% extends 'base-dashboard.html' %}
 {% block sub_content %}
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/projects/" class="mdl-layout__tab is-active">Projects</a>
+		<a href="/user_id/projects/create/" class="mdl-layout__tab ">Add new project</a>
+	</div>
 	<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 		<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 			<div class="mdl-card__title">
@@ -233,8 +237,8 @@
 				</ul>
 			</div>
 		</div>
-		<a href="/user_id/projects/create/" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="add-btn" >
+		<!-- 		<a href="/user_id/projects/create/" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect" id="add-btn" >
 			<i class="material-icons">add</i>
-		</a>
-	-->	</section>
+		</a> -->
+	</section>
 {% endblock %}

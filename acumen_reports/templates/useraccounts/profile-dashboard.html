@@ -1,1 +1,70 @@
-	<h3>This is dashboard of project's profile.</h3>
+{% extends 'base-dashboard.html' %}
+{% load staticfiles %}
+{% block sub_content %}
+	<!-- FIX: Weird errors with navbar -->
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/1/" class="mdl-layout__tab">All Reports</a>
+		<a href="/user_id/1/history/" class="mdl-layout__tab">History</a>
+		<a href="/user_id/1/1/" class="mdl-layout__tab  is-active">Integration</a>
+		<a href="/user_id/1/settings/" class="mdl-layout__tab">Settings</a>
+	</div>
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+		<div class="mdl-tabs__tab-bar">
+			<a href="#profile" class="mdl-tabs__tab is-active">Dashboard</a>
+			<a href="#add-int" class="mdl-tabs__tab ">Add a new integration</a>
+		</div>
+		<div class="mdl-tabs__panel is-active" id="profile">
+			<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+				<img class="mdl-chip__contact" src='{% static "images/google-analytics-logo.png" %}' />
+				<span class="mdl-chip__text">Google Analytics</span>
+				<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+			</span>
+			<br />
+			<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+				<img class="mdl-chip__contact" src='{% static "images/google-logo.png" %}' />
+				<span class="mdl-chip__text">Google Search Console</span>
+				<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+			</span>
+			<br />
+			<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+				<img class="mdl-chip__contact" src='{% static "images/facebook-logo.png" %}' />
+				<span class="mdl-chip__text">Facebook Analytics</span>
+				<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+			</span>
+			<br />
+			<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+				<img class="mdl-chip__contact" src='{% static "images/twitter-logo.png" %}' />
+				<span class="mdl-chip__text">Twitter Analytics</span>
+				<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+			</span>
+			<br />
+			<span class="profile-chips mdl-chip mdl-chip--contact mdl-chip-deletable">
+				<img class="mdl-chip__contact" src='{% static "images/google-adwords-logo.png" %}' />
+				<span class="mdl-chip__text">Google AdWords</span>
+				<a href="" class="mdl-chip__action"><i class="material-icons">cancel</i></a>
+			</span>
+		</div>
+		<div class="profiles mdl-tabs__panel" id="add-int">
+			<div>
+				<h4>Google Analytics</h4>
+				<a href=""><img style="width:50px; height: 50px;" src="{% static 'images/google-analytics-logo.png' %}"/></a>
+			</div>
+			<div>
+				<h4>Google Search Console</h4>
+				<a href=""><img style="width:50px; height: 50px;" src="{% static 'images/google-logo.png' %}" /></a>
+			</div>
+			<div>
+				<h4>Twitter Analytics</h4>
+				<a href=""><img style="width:50px; height: 50px;" src="{% static 'images/twitter-logo.png' %}" /></a>
+			</div>
+			<div>
+				<h4>Facebook Analytics</h4>
+				<a href=""><img style="width:50px; height: 50px;" src="{% static 'images/facebook-logo.png' %}" /></a>
+			</div>
+			<div>
+				<h4>Google AdWords</h4>
+				<a href=""><img style="width:50px; height: 50px;" src="{% static 'images/google-adwords-logo.png' %}" /></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

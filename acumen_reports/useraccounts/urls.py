@@ -14,7 +14,8 @@ from .views import (
     ReportDashboard,
     ReportsHistory,
     CreateReport,
-    CreateProject
+    CreateProject,
+    ProjectHistory
 )
 
 from analytics.views import (
@@ -39,6 +40,7 @@ project_urls = [
 
     url(r'^settings/$', ProjectSettings.as_view(), name='project_settings'),
     url(r'^reports/$', ProjectReports.as_view(), name='project_reports'),
+    url(r'^history/$', ProjectHistory.as_view(), name='project_history'),
 
     url(r'^(?P<profile_id>\d+)/', include(profile_urls)),
 ]
