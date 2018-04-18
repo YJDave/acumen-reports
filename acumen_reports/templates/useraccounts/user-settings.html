@@ -2,7 +2,7 @@
 {% block sub_content %}
 	<section class="profile-section section--center mdl-grid mdl-shadow--24dp">
 		<div class="mdl-cell mdl-cell--12-col">
-			<h2>Profile</h2>
+			<h2>My Account</h2>
 			<form action="#" class="">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" pattern="[A-Z,a-z,0-9]*" type="text" id="usermame" value="doejohn1">
@@ -32,11 +32,19 @@
 					<label class="mdl-textfield__label" for="Phone">Password</label>
 				</div>
 				<br />
-				<p>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Edit
-					</button>
-				</p>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Update
+				</button>
+				<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--red-800 mdl-color-text--white">
+				Delete
+				</button>
 			</form>
+			<hr>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-400 mdl-color-text--white">
+			Change Password
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-800 mdl-color-text--white">
+			Reset Password
+			</button>
 		</div>
 	</section>
 {% endblock %}
