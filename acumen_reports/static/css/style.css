@@ -1,13 +1,12 @@
 #signup {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
-  background-color: pink; /* Keeping it for error-check */
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 #add-btn {
@@ -21,6 +20,10 @@ a {
       background-color: gray;
 }
 
+/* stubborn left and right buttons that won't change color!*/
+.mdl-layout__tab-bar-left-button,.mdl-layout__tab-bar-right-button, .mdl-layout__tab-bar, .mdl-layout__header{
+  background-color: #37474F;
+}
 /* Side navigation bar  */
 
 .demo-drawer {
@@ -29,9 +32,9 @@ a {
 }
 
 .acumen-header {
-	font-size: 30px;
-	margin-top: 5px;
-	padding-bottom: 20px;
+  font-size: 30px;
+  margin-top: 5px;
+  padding-bottom: 20px;
 }
 
 .demo-avatar {
@@ -90,8 +93,8 @@ a {
 }
 
 .demo-card-wide {
-	margin: 20px;
-	width: 490px;
+  margin: 20px;
+  width: 490px;
 }
 
 .demo-card-wide > .mdl-card__title {
@@ -108,17 +111,17 @@ a {
 /* User Settings*/
 .profile-section{
   margin-top: 40px !important;
-	width: 50%;
-	margin: auto;
-	text-align: center;
+  width: 50%;
+  margin: auto;
+  text-align: center;
 }
 .profile-section .mdl-textfield__input{
-		font-size: 18px ;
+    font-size: 18px ;
 
-	}
+  }
 
 .profile-section .mdl-textfield__label{
-	font-size: 18px;
+  font-size: 18px;
 }
 
 /* Projects */
@@ -127,11 +130,11 @@ a {
 }
 /* Reports */
 .report-section{
-	background-color: #263338;
+  background-color: #263338;
  }
 
 .report-settings .mdl-textfield{
- 	width: 100%;
+  width: 100%;
  }
 
  /* Profile */
@@ -145,10 +148,10 @@ a {
 }
 /* Footer */
 .mdl-mini-footer {
-	position: absolute;
+  position: absolute;
   top: 100%;
-	bottom:0;
+  bottom:0;
   /*left: 0;*/
-	width: 97.6%;
-	height:20px;   /* Height of the footer */
+  width: 97.6%;
+  height:20px;   /* Height of the footer */
 }
