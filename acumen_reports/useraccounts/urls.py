@@ -1,6 +1,5 @@
 from django.conf.urls import url, include
 from .views import (
-    HomePage,
     UserDashboard,
     ProjectDashboard,
     ProjectProfileDashboard,
@@ -46,23 +45,22 @@ project_urls = [
 ]
 
 urlpatterns = [
-    url(r'^$', HomePage.as_view(), name='home'),
-    url(r'^(?P<user_name>\w+)/$',
+    url(r'^$',
         UserDashboard.as_view(), name='user_dashboard'),
-    url(r'^(?P<user_name>\w+)/projects/$',
+    url(r'^projects/$',
         ListAllProjects.as_view(), name='all_projects'),
-    url(r'^(?P<user_name>\w+)/projects/create/$',
+    url(r'^projects/create/$',
         CreateProject.as_view(), name='create_project'),
-    url(r'^(?P<user_name>\w+)/reports/$',
+    url(r'^reports/$',
         ListAllReports.as_view(), name='all_reports'),
-    url(r'^(?P<user_name>\w+)/reports/history/$',
+    url(r'^reports/history/$',
         ReportsHistory.as_view(), name='report_history'),
-    url(r'^(?P<user_name>\w+)/reports/create/$',
+    url(r'^reports/create/$',
         CreateReport.as_view(), name='create_report'),
-    url(r'^(?P<user_name>\w+)/reports/(?P<report_id>\d+)/',
+    url(r'^reports/(?P<report_id>\d+)/',
         ReportDashboard.as_view(), name='report_dashboard'),
-    url(r'^(?P<user_name>\w+)/settings/$',
+    url(r'^settings/$',
         UserSettings.as_view(), name='user_settings'),
 
-    url(r'^(?P<user_name>\w+)/(?P<proj_id>\d+)/', include(project_urls)),
+    url(r'^(?P<proj_id>\d+)/', include(project_urls)),
 ]

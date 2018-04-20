@@ -1,10 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.contrib.auth import views
 
 
 class HomePage(views.TemplateView):
-    template_name = 'useraccounts/home.html'
+    template_name = 'index.html'
     pass
 
 

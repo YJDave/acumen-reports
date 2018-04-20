@@ -14,27 +14,23 @@
       <!-- ========Navbar content========== -->
       {% block usersignin %}
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-          <header class="mdl-layout__header  mdl-color--grey-800 mdl-color-text--grey-100">
+          <header class="mdl-layout__header mdl-color-text--grey-100">
             <div class="mdl-layout__header-row">
               <!-- Title -->
               <span class="mdl-layout-title">Acumen Automated Reports</span>
               <!-- TODO: Open modal of sign in, sign up on click event. -->
               <div class="mdl-layout-spacer"></div>
               {% if not user.is_authenticated %}
-                <a href="{% url 'account_signup' %}"
-                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
                   mdl-color--grey-100 mdl-color-text--grey-800" id="signup">Sign up</a>
-                <a href="{% url 'account_login' %}"
-                  class="mdl-button mdl-js-button
-                  mdl-button--raised mdl-js-ripple-effect
+                <a href="" class="mdl-button mdl-js-button
+                  mdl-buton--raised mdl-js-ripple-effect
                   mdl-color--grey-100 mdl-color-text--grey-800">Sign
                 in</a>
               {% else %}
-                <a href="{% url 'account_logout' %}"
-                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
                   mdl-color--grey-100 mdl-color-text--grey-800" id="signup">Logout</a>
-                <a href="{% url 'user_dashboard' user_name=request.user.username %}"
-                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                <a href="" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
                   mdl-color--grey-100 mdl-color-text--grey-800"
                 id="signup">My Dashboard</a>
               {% endif %}
