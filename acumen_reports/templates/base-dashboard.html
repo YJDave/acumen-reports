@@ -42,7 +42,7 @@
         <a class="mdl-navigation__link" href="/user_id/reports/"><i class="material-icons">subject</i>Reports</a>
         <a class="mdl-navigation__link" href="/user_id/settings/"><i class="material-icons">settings</i>Account Settings</a>
 <!--         <div class="mdl-layout-spacer"></div> -->
-        <a class="mdl-navigation__link" href=""><i class="material-icons">power_settings_new</i>Logout</a>
+        <a class="mdl-navigation__link" href="{% url 'account_logout' %}"><i class="material-icons">power_settings_new</i>Logout</a>
       </nav>
     </div>
   {% endblock %}
