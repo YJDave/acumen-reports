@@ -62,7 +62,7 @@ class UserSettings(views.TemplateView):
 
 
 class ReportDashboard(views.TemplateView):
-    template_name = "useraccounts/report.html"
+    template_name = "useraccounts/report-dashboard.html"
     pass
 
 
@@ -78,4 +78,9 @@ class CreateReport(views.TemplateView):
 
 class ProjectHistory(views.TemplateView):
     template_name = "useraccounts/project-history.html"
+    pass
+
+
+class ReportSetting(views.TemplateView):
+    template_name = "useraccounts/report-setting.html"
     pass

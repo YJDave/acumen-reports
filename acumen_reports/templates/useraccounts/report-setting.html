@@ -1,59 +1,11 @@
 {% extends 'base-dashboard.html' %}
 {% load staticfiles %}
 {% block sub_content %}
-	<!-- FIX: Weird errors with navbar -->
-	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-		<div class="mdl-tabs__tab-bar">
-			<a href="#report" class="mdl-tabs__tab is-active">Report</a>
-			<a href="#details" class="mdl-tabs__tab">Details</a>
-			<a href="#history" class="mdl-tabs__tab">History</a>
-			<a href="#settings" class="mdl-tabs__tab ">Settings</a>
-		</div>
-		<div class="mdl-tabs__panel is-active" id="report">
-			<section class="">
-					<h2>Report chart</h2>
-					<div><img src="{% static 'images/img-1.png' %}"/></div>
-					<br />
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Generate now!</button>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Download</button>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Mail to</button>
-			</section>
-		</div>
-		<div class="mdl-tabs__panel" id="history">
-			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%">
-				<thead>
-					<tr>
-						<th class="mdl-data-table__cell">No</th>
-						<th>Date</th>
-						<th>Send to</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="mdl-data-table__cell">1</td>
-						<td>25/12/2001</td>
-						<td>asdl@adslf.com, ewqr@gmail.com</td>
-					</tr>
-					<tr>
-						<td class="mdl-data-table__cell">1</td>
-						<td>25/12/2001</td>
-						<td>asdl@adslf.com, ewqr@gmail.com</td>
-					</tr>
-					<tr>
-						<td class="mdl-data-table__cell">1</td>
-						<td>25/12/2001</td>
-						<td>asdl@adslf.com, ewqr@gmail.com</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="mdl-tabs__panel" id="details">
-			<h2>Google Analytics Everyday Report</h2>
-			<h5>Description of report, etc. etc.</h5>
-			<h5>Project XYZ</h5>
-			<h5>Created on 4th March, 2018 by user XYZ</h5>
-			<h5>Emails to send: asdcm@gmail.com, asdflk@gmail.com</h5>
-		</div>
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
+		<a href="/user_id/reports/12/" class="mdl-layout__tab">Report Dashboard</a>
+		<a href="/user_id/reports/12/settings/" class="mdl-layout__tab  is-active">Settings</a>
+	</div>
+	<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 		<div class="mdl-tabs__panel profile-section section--center mdl-grid mdl-shadow--24dp " id="settings">
 			<h2>Report Settings</h2>
 			<form action="#" class="report-settings">
@@ -110,5 +62,5 @@
 				</button>
 			</form>
 		</div>
-	</div>
+	</section>
 {% endblock %}

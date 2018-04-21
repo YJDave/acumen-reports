@@ -7,9 +7,15 @@ html, body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
-#add-btn {
+/*.mdl-grid {
+  padding-bottom: 10px !important;
+  padding-left: 10px !important;
+}*/
+
+#the-sticky-btn {
       position: sticky;
       display: block;
       right: 0;
@@ -17,7 +23,7 @@ a {
       margin-right: 40px;
       margin-bottom: 40px;
       z-index: 900;
-      background-color: gray;
+      background-color: transparent;
 }
 
 /* stubborn left and right buttons that won't change color!*/
@@ -105,7 +111,7 @@ a {
 }
 
 .demo-card-wide > .mdl-card__menu {
-  color: #000;
+  color: #fff;
 }
 
 /* User Settings*/
