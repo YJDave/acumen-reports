@@ -1,5 +1,17 @@
 {% extends 'base-dashboard.html' %}
 {% block sub_content %}
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="navbar">
+		<a href="/user_id/projects/1/" class="mdl-layout__tab">All Reports</a>
+		<a href="/user_id/projects/1/history/" class="mdl-layout__tab">History</a>
+		<a href="/user_id/projects/1/profiles/" class="mdl-layout__tab is-active">Profiles</a>
+		<a href="/user_id/projects/1/settings/" class="mdl-layout__tab">Settings</a>
+	</div>
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+		<div class="mdl-tabs__tab-bar">
+			<a href="/user_id/projects/1/profiles/" class="mdl-tabs__tab is-active">Active Profiles</a>
+			<a href="/user_id/projects/1/profiles/create/" class="mdl-tabs__tab">Add new profile</a>
+		</div>
+	</div>
 	<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 		<div class="mdl-card__title">
 			<h2 class="mdl-card__title-text">Google Analytics Integration</h2>
@@ -27,6 +39,6 @@
 				<b>View</b>
 			</a>
 		</div>
-		</div>
 	</div>
+</div>
 {% endblock %}

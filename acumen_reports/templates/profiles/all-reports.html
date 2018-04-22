@@ -1,9 +1,14 @@
 {% extends 'base-dashboard.html' %}
 {% block sub_content %}
-	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="height: 66px; background-color: #263338; width: 100%;">
-		<a href="/user_id/reports/" class="mdl-layout__tab is-active">Reports</a>
-		<a href="/user_id/reports/history/" class="mdl-layout__tab">History</a>
-		<a href="/user_id/reports/create/" class="mdl-layout__tab">Add new report</a>
+	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="navbar" >
+		<a href="/user_id/projects/1/profiles/1/" class="mdl-layout__tab ">Google Analytics Dashboard</a>
+		<a href="/user_id/projects/1/profiles/1/reports/" class="mdl-layout__tab is-active">Reports</a>
+		<div class="mdl-layout-spacer"></div>
+		<a href="/user_id/projects/1/profiles/" class="mdl-button mdl-js-button mdl-button--icon" style="color: #fff;" id="back">
+			<div class="icon material-icons">keyboard_return</div>
+			<div class="mdl-tooltip" data-mdl-for="back">Back to <strong>profiles</strong>
+			</div>
+		</a>
 	</div>
 	<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 		<div class="mdl-card__title">

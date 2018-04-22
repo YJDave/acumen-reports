@@ -26,6 +26,11 @@ a {
       background-color: transparent;
 }
 
+#navbar {
+  height: 66px;
+  background-color: #263338;
+  width: 100%;
+}
 /* stubborn left and right buttons that won't change color!*/
 .mdl-layout__tab-bar-left-button,.mdl-layout__tab-bar-right-button, .mdl-layout__tab-bar, .mdl-layout__header{
   background-color: #37474F;
