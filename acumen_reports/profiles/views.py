@@ -11,3 +11,7 @@ class ProjectProfileDashboard(views.TemplateView):
 class ProfileReports(views.TemplateView):
     template_name = "profiles/all-reports.html"
     pass
+
+class ListAllProjectProfiles(views.TemplateView):
+	template_name = "profiles/all-project-profiles.html"
+	pass
