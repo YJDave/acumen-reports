@@ -67,10 +67,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'acumen_reports.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [os.path.join(BASE_DIR, "templates"),
+                 os.path.join(BASE_DIR, "templates/allauth"), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -140,6 +142,7 @@ STATICFILES_DIRS = [
 ]
 
 SITE_ID = 1
+SITE_NAME = 'Acumen Automated Reporting Site'
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_USERNAME_BLACKLIST = ["add", "projects", "create", "admin"
