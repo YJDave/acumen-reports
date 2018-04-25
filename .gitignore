@@ -106,5 +106,3 @@ ENV/
 # Databases
 .DS_Store
 *.sqlite3
-db.sqlite3
-
