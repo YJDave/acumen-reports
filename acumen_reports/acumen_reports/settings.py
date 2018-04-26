@@ -147,5 +147,12 @@ SITE_ID = 1
 SITE_NAME = 'Acumen Automated Reporting Site'
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_USERNAME_BLACKLIST = ["add", "projects", "create", "admin"
                               "reports", "accounts", "settings"]
+ACCOUNT_FORMS = {
+    'signup': 'useraccounts.forms.RegisterForm',
+    #       'profile': 'accounts.forms.ProfileForm',
+
+}

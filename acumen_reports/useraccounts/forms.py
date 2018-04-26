@@ -20,7 +20,7 @@ class RegisterForm(forms.ModelForm):
     def clean_username(self):
         username = self.data.get('username')
         if username.lower() in settings.ACCOUNT_USERNAME_BLACKLIST:
-            raise forms.ValidationError("Kidnly use a different username.")
+            raise forms.ValidationError("Kindly use a different username.")
 
         return username
 
@@ -54,3 +54,9 @@ class RegisterForm(forms.ModelForm):
             email = None
 
         return email
+
+    def save(self, *args, **kwargs):
+        user = super().save(*args, **kwargs)
+        user.set_password(self.cleaned_data['password'])
+        user.save()
+        return user

@@ -4,8 +4,8 @@
   <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
     <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
-<!--         <span class="mdl-layout-title">Home</span>
- -->        <div class="mdl-layout-spacer"></div>
+        <!--         <span class="mdl-layout-title">Home</span>
+        -->        <div class="mdl-layout-spacer"></div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
             <i class="material-icons">search</i>
@@ -41,7 +41,7 @@
         <a class="mdl-navigation__link is-active" href="/user_id/projects/"><i class="material-icons">folder</i>Projects</a>
         <a class="mdl-navigation__link" href="/user_id/reports/"><i class="material-icons">subject</i>Reports</a>
         <a class="mdl-navigation__link" href="/user_id/settings/"><i class="material-icons">settings</i>Account Settings</a>
-<!--         <div class="mdl-layout-spacer"></div> -->
+        <!--         <div class="mdl-layout-spacer"></div> -->
         <a class="mdl-navigation__link" href="{% url 'account_logout' %}"><i class="material-icons">power_settings_new</i>Logout</a>
       </nav>
     </div>
@@ -49,9 +49,9 @@
   {% block main_content %}
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid demo-content">
-          {% block sub_content %}
-          {% endblock %}
-        </div>
+        {% block sub_content %}
+        {% endblock %}
       </div>
     </main>
-      {% endblock %}
+  </div>
+{% endblock %}
