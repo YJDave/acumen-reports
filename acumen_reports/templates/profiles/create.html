@@ -1,36 +1,42 @@
-{% extends 'base-dashboard.html' %}
-{% load staticfiles %}
-{% block sub_content %}
-	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="navbar">
-		<a href="/user_id/projects/1/" class="mdl-layout__tab">All Reports</a>
-		<a href="/user_id/projects/1/history/" class="mdl-layout__tab">History</a>
-		<a href="/user_id/projects/1/profiles/" class="mdl-layout__tab is-active">Profiles</a>
-		<a href="/user_id/projects/1/settings/" class="mdl-layout__tab">Settings</a>
+{% extends 'base-dashboard.html' %} {% load staticfiles %} {% block sub_content %}
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="navbar">
+	<a href="/user_id/projects/1/" class="mdl-layout__tab">All Reports</a>
+	<a href="/user_id/projects/1/history/" class="mdl-layout__tab">History</a>
+	<a href="/user_id/projects/1/profiles/" class="mdl-layout__tab is-active">Profiles</a>
+	<a href="/user_id/projects/1/settings/" class="mdl-layout__tab">Settings</a>
+</div>
+<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+	<div class="mdl-tabs__tab-bar">
+		<a href="/user_id/projects/1/profiles/" class="mdl-tabs__tab ">Active Profiles</a>
+		<a href="/user_id/projects/1/profiles/create/" class="mdl-tabs__tab is-active">Add new profile</a>
 	</div>
-	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-		<div class="mdl-tabs__tab-bar">
-			<a href="/user_id/projects/1/profiles/" class="mdl-tabs__tab ">Active Profiles</a>
-			<a href="/user_id/projects/1/profiles/create/" class="mdl-tabs__tab is-active">Add new profile</a>
-		</div>
-	</div>
-	<div class="">
-		<h4>Google Analytics</h4>
-		<a href=""><img style="width:50px; height: 50px;" src="{% static 'images/google-analytics-logo.png' %}"/></a>
-		<h4>Google Search Console</h4>
-		<a href="">
+</div>
+<div class="">
+	<h4>Google Analytics</h4>
+	<form method="post" action="{% url 'analytics_setup' %}">
+		{% csrf_token %}
+		<input class="mdl-button mdl-js-button" type="submit" value="Integrate Google Analytics">
+	</form>
+	<a href="">
+		<img style="width:50px; height: 50px;" src="{% static 'images/google-analytics-logo.png' %}"/>
+	</a>
+	<h4>Google Search Console</h4>
+	<a href="">
 			<img style="width:50px; height: 50px;" src="{% static 'images/google-logo.png' %}" />
 		</a>
-		<h4>Twitter Analytics</h4>
-		<a href="">
+
+
+	<h4>Twitter Analytics</h4>
+	<a href="">
 			<img style="width:50px; height: 50px;" src="{% static 'images/twitter-logo.png' %}" />
 		</a>
-		<h4>Facebook Analytics</h4>
-		<a href="">
+	<h4>Facebook Analytics</h4>
+	<a href="">
 			<img style="width:50px; height: 50px;" src="{% static 'images/facebook-logo.png' %}" />
 		</a>
-		<h4>Google AdWords</h4>
-		<a href="">
+	<h4>Google AdWords</h4>
+	<a href="">
 			<img style="width:50px; height: 50px;" src="{% static 'images/google-adwords-logo.png' %}" />
 		</a>
-	</div>
+</div>
 {% endblock %}

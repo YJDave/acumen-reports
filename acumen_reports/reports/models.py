@@ -1,8 +1,9 @@
 from django.db import models
 from multi_email_field.fields import MultiEmailField
 from projects.models import (
-	Project,
+    Project,
 )
+
 
 class Report(models.Model):
     # TODO: Remove hard coded report types

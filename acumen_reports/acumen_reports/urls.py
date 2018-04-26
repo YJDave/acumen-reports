@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^accounts/login/$', views.LoginView.as_view(), name='account_login'),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^(?P<user_name>\w+)/', include('useraccounts.urls')),
+    url(r'^integrations/', include('integrations.urls')),
 ]

@@ -1,14 +1,14 @@
 from django.db import models
-from django.conf import settings
 from integrations.models import (
     ProfileAuth,
 )
+from useraccounts.models import User
 
 
 class Project(models.Model):
     # FEATURE: Allow user to add tags in projects and
     # filter projects using tags as well.
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+    user = models.ForeignKey(User,
                              on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     description = models.CharField(max_length=1500)
@@ -27,7 +27,8 @@ class Profile(models.Model):
 
     # This will include all profiles which are added by user
     # using different integration.
-    # Though, how to map this to integration type's authentication model is not clear yet.
+    # Though, how to map this to integration type's authentication
+    # model is not clear yet.
     # TODO: Relate this model with integration-authentication model.
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)

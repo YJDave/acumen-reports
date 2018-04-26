@@ -26,7 +26,7 @@ profile_urls = [
 main_profile_urls = [
     url(r'^$', ListAllProfiles.as_view(), name='all_profiles'),
     url(r'^create/$', CreateProfile.as_view(), name='create_profile'),
-    url(r'^create/', include('integrations.urls')),
+    # url(r'^create/', include('integrations.urls')),
     url(r'^(?P<profile_id>\d+)/', include(profile_urls)),
 ]
 
