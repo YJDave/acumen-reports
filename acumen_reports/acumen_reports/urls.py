@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from useraccounts.views.home import HomePage
+from useraccounts.views.user_accounts import RegisterView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomePage.as_view(), name="home"),
+    url(r'^accounts/signup/$', RegisterView.as_view(), name="account_signup"),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^(?P<user_name>\w+)/', include('useraccounts.urls')),
 ]

@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'useraccounts.User'
+
 ACCOUNT_ADAPTER = 'useraccounts.adapter.DefaultAccountAdapter'
 
 # Application definition
