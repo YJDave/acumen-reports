@@ -1,82 +1,82 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- 	Add dependecies here -->
-		<link rel="stylesheet" href='{% static "mdl/material.min.css" %}'>
-		<script src='{% static "mdl/material.min.js" %}'></script>
-		<link rel="stylesheet" href='{% static "mdl/material-icons.css" %}'></head>
-		<link rel="stylesheet" href='{% static "css/style.css" %}'></head>
-		<!-- getmdl-select for dropdown -->
-		<link rel="stylesheet" href='{% static "getmdl-select/getmdl-select.min.css"%}'>
-		<script defer src='{% static "getmdl-select/getmdl-select.min.js" %}'></script>
-		<body>
-			<!-- ========Navbar content========== -->
-			{% block usersignin %}
-				<div class="wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
-					<header class="mdl-layout__header  mdl-color--grey-600 mdl-color-text--grey-100">
-						<div class="mdl-layout__header-row">
-							<!-- Title -->
-							<span class="mdl-layout-title">Acumen Automated Reports</span>
-							<!-- TODO: Open modal of sign in, sign up on click event. -->
-							<div class="mdl-layout-spacer"></div>
-							{% if not user.is_authenticated %}
-								<a href="{% url 'account_signup' %}"
-									class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
-									mdl-color--grey-100 mdl-color-text--grey-800" id="signup">Sign up</a>
-								<a href="{% url 'account_login' %}"
-									class="mdl-button mdl-js-button
-									mdl-button--raised mdl-js-ripple-effect
-									mdl-color--grey-100 mdl-color-text--grey-800">Sign
-								in</a>
-							{% else %}
-								<a href="{% url 'account_logout' %}"
-									class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
-									mdl-color--grey-100 mdl-color-text--grey-800"	id="signup">Logout</a>
-								<a href="{% url 'user_dashboard' user_name=request.user.username %}"
-									class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
-									mdl-color--grey-100 mdl-color-text--grey-800"
-								id="signup">My Dashboard</a>
-							{% endif %}
-						</div>
-						<!-- Tabs -->
-						<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-							<a href="#scroll-tab-1" class="mdl-layout__tab is-active">Home</a>
-							<a href="#scroll-tab-2" class="mdl-layout__tab">Plans</a>
-							<a href="#scroll-tab-3" class="mdl-layout__tab">Technology</a>
-							<a href="#scroll-tab-4" class="mdl-layout__tab">Contact Us</a>
-						</div>
-					</header>
-					<main class="mdl-layout__content">
-						<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-							<div class="page-content"><!-- Your content goes here --></div>
-						</section>
-						<section class="mdl-layout__tab-panel" id="scroll-tab-2">
-							<div class="page-content"><!-- Your content goes here --></div>
-						</section>
-						<section class="mdl-layout__tab-panel" id="scroll-tab-3">
-							<div class="page-content"><!-- Your content goes here --></div>
-						</section>
-						<section class="mdl-layout__tab-panel" id="scroll-tab-4">
-							<div class="page-content"><!-- Your content goes here --></div>
-						</section>
-					{% endblock %}
-					
-					{% block main_content %}
-					{% endblock %}
-					<!-- ========Footbar content======= -->
-					<footer class="mdl-mini-footer">
-						<div class="mdl-mini-footer__left-section">
-							<div class="mdl-logo">Acumen reports</div>
-						</div>
-						<div class="mdl-mini-footer__right-section">
-							<ul class="mdl-mini-footer__link-list">
-								<li><a href="#">Help</a></li>
-								<li><a href="#">Privacy & Terms</a></li>
-							</ul>
-						</div>
-					</footer>
-				</main>
-			</div>
-		</body>
-	</html>
+  <head>
+    <!--  Add dependecies here -->
+    <link rel="stylesheet" href='{% static "mdl/material.min.css" %}'>
+    <script src='{% static "mdl/material.min.js" %}'></script>
+    <link rel="stylesheet" href='{% static "mdl/material-icons.css" %}'></head>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'></head>
+    <!-- getmdl-select for dropdown -->
+    <link rel="stylesheet" href='{% static "getmdl-select/getmdl-select.min.css"%}'>
+    <script defer src='{% static "getmdl-select/getmdl-select.min.js" %}'></script>
+    <body>
+      <!-- ========Navbar content========== -->
+      {% block usersignin %}
+        <div class="wrapper mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header  mdl-color--grey-800 mdl-color-text--grey-100">
+            <div class="mdl-layout__header-row">
+              <!-- Title -->
+              <span class="mdl-layout-title"><a href="{% url 'home' %}">Acumen Automated Reports</a></span>
+              <!-- TODO: Open modal of sign in, sign up on click event. -->
+              <div class="mdl-layout-spacer"></div>
+              {% if not user.is_authenticated %}
+                <a href="{% url 'account_signup' %}"
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                  mdl-color--grey-100 mdl-color-text--grey-800" id="register-btn">Register</a>
+                <a href="{% url 'account_login' %}"
+                  class="mdl-button mdl-js-button
+                  mdl-button--raised mdl-js-ripple-effect
+                  mdl-color--grey-100 mdl-color-text--grey-800">Sign
+                in</a>
+              {% else %}
+                <a href="{% url 'account_logout' %}"
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                  mdl-color--grey-100 mdl-color-text--grey-800" id="register-btn">Logout</a>
+                <a href="{% url 'user_dashboard' user_name=request.user.username %}"
+                  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                  mdl-color--grey-100 mdl-color-text--grey-800"
+                id="signup">My Dashboard</a>
+              {% endif %}
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+              <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Home</a>
+              <a href="#scroll-tab-2" class="mdl-layout__tab">Plans</a>
+              <a href="#scroll-tab-3" class="mdl-layout__tab">Technology</a>
+              <a href="#scroll-tab-4" class="mdl-layout__tab">Contact Us</a>
+            </div>
+          </header>
+          <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+              <div class="page-content"><!-- Your content goes here --></div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+              <div class="page-content"><!-- Your content goes here --></div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+              <div class="page-content"><!-- Your content goes here --></div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+              <div class="page-content"><!-- Your content goes here --></div>
+            </section>
+          {% endblock %}
+          
+          {% block main_content %}
+          {% endblock %}
+          <!-- ========Footbar content======= -->
+          <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+              <div class="mdl-logo">Acumen reports</div>
+            </div>
+            <div class="mdl-mini-footer__right-section">
+              <ul class="mdl-mini-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+              </ul>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </body>
+  </html>

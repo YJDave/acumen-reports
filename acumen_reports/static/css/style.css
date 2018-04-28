@@ -1,6 +1,15 @@
-#signup {
+#register-btn {
   margin-right: 10px;
 }
+dialog {
+  width: 50%;
+  border: none;
+}
+.allauth{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }

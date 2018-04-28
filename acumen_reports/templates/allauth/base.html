@@ -1,8 +1,12 @@
 {% extends 'index.html' %}
 {% block main_content %}
   <div class="demo-layout mdl-layout">
-    <main class="mdl-layout__content mdl-color--grey-100">
-      <dialog open>
+    <main class="allauth mdl-layout__content mdl-color--grey-100">
+      <dialog class="mdl-shadow--6dp" open>
+      <a href="{% url 'home' %}">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+        <i class="material-icons">close</i>
+      </button></a>
       <div class="demo-content">
         {% if messages %}
           <div>
