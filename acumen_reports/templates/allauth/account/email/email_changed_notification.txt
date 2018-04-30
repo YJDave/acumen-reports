@@ -1,0 +1,11 @@
+{% load i18n %}{% autoescape off %}
+
+{% blocktrans %}
+You are receiving this email because a user at Acumen changed the email address for the account previously linked to this email address.
+
+If it wasn't you who changed the email address, please contact us immediately under security@acumen.com.
+{% endblocktrans %}
+
+{% blocktrans %}The Acumen Team. {% endblocktrans %}
+
+{% endautoescape %}

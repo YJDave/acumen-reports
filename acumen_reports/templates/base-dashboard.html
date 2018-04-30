@@ -36,11 +36,11 @@
         </div>
       </header>
       <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link is-active" href="/user_id/"><i class="material-icons">flag</i>Recent Updates</a>
+        <a class="mdl-navigation__link is-active" href="{% url 'user_dashboard' user_name=request.user.username %}"><i class="material-icons">flag</i>Recent Updates</a>
         <a class="mdl-navigation__link" href="/"><i class="material-icons">home</i>Home</a>
-        <a class="mdl-navigation__link is-active" href="/user_id/projects/"><i class="material-icons">folder</i>Projects</a>
-        <a class="mdl-navigation__link" href="/user_id/reports/"><i class="material-icons">subject</i>Reports</a>
-        <a class="mdl-navigation__link" href="/user_id/settings/"><i class="material-icons">settings</i>Account Settings</a>
+        <a class="mdl-navigation__link is-active" href="{% url 'all_projects' user_name=request.user.username %}"><i class="material-icons">folder</i>Projects</a>
+        <a class="mdl-navigation__link" href="{% url 'all_reports' user_name=request.user.username %}"><i class="material-icons">subject</i>Reports</a>
+        <a class="mdl-navigation__link" href="{% url 'user_settings' user_name=request.user.username %}"><i class="material-icons">settings</i>Account Settings</a>
         <!--         <div class="mdl-layout-spacer"></div> -->
         <a class="mdl-navigation__link" href="{% url 'account_logout' %}"><i class="material-icons">power_settings_new</i>Logout</a>
       </nav>
