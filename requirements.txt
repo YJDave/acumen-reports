@@ -7,3 +7,4 @@ jsonpickle==0.9.6
 pytz==2018.3
 django-multi-email-field==0.5.1
 django-widget-tweaks==1.4.2
+phonenumbers==8.9.4

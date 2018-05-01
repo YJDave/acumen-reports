@@ -154,6 +154,7 @@ ACCOUNT_USERNAME_BLACKLIST = ["add", "projects", "create", "admin"
                               "reports", "accounts", "settings"]
 ACCOUNT_FORMS = {
     'signup': 'useraccounts.forms.RegisterForm',
-    #       'profile': 'accounts.forms.ProfileForm',
+    'profile': 'accounts.forms.UserSettingsForm',
 
 }
+DEFAULT_FROM_EMAIL = 'testing@example.com'

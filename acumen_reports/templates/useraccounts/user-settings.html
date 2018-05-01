@@ -1,50 +1,51 @@
-{% extends 'base-dashboard.html' %}
-{% block sub_content %}
-	<section class="profile-section section--center mdl-grid mdl-shadow--24dp">
-		<div class="mdl-cell mdl-cell--12-col">
-			<h2>My Account</h2>
-			<form action="#" class="">
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" pattern="[A-Z,a-z,0-9]*" type="text" id="usermame" value="doejohn1">
-					<label class="mdl-textfield__label" for="username">Username</label>
-					<span class="mdl-textfield__error">Letters and Numbers only, no spaces</span>
-				</div>
-				<br />
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" value="John Doe">
-					<label class="mdl-textfield__label" for="Name">Full Name</label>
-					<span class="mdl-textfield__error">Letters and spaces only</span>
-				</div>
-				<br />
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" type="text" id="Email" value="john.doe@example.com">
-					<label class="mdl-textfield__label" for="Email">Email address</label>
-				</div>
-				<br />
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" pattern="[0-9,+]*" type="text" id="Phone" value='+1234567890'>
-					<label class="mdl-textfield__label" for="Phone">Phone number</label>
-					<span class="mdl-textfield__error">Number and '+' only</span>
-				</div>
-				<br />
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" type="password" id="pwd" value='jon@123'>
-					<label class="mdl-textfield__label" for="Phone">Password</label>
-				</div>
-				<br />
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Update
-				</button>
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--red-800 mdl-color-text--white">
-				Delete
-				</button>
-			</form>
-			<hr>
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-400 mdl-color-text--white">
+{% extends 'base-dashboard.html' %} {% load widget_tweaks %} {% block sub_content %}
+<section class="profile-section section--center mdl-grid mdl-shadow--24dp">
+	{% if form.non_field_errors %}
+	<div id="messages">
+		{% for message in form.non_field_errors %}
+		<div class="">
+			{{ message|escape }}
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	<div class="mdl-cell mdl-cell--12-col">
+		<h2>My Account</h2>
+		<form method="post" action="{% url 'user_settings' user_name=request.user.username %}" class="">
+			{% csrf_token %}
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<label class="mdl-textfield__label" for="id_{{ form.username.name }}">{{ form.username.label }}</label> {% render_field form.username class+="mdl-textfield__input"%}
+				<span class="">{{ form.username.errors }}</span>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<label class="mdl-textfield__label" for="id_{{ form.email.name }}">{{ form.email.label }}</label> {% render_field form.email class+="mdl-textfield__input"%}
+				<span class="">{{ form.email.errors }}</span>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<label class="mdl-textfield__label" for="id_{{ form.phone.name }}">{{ form.phone.label }}</label> {% render_field form.phone class+="mdl-textfield__input"%}
+				<span class="">{{ form.phone.errors }}</span>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<label class="mdl-textfield__label" for="id_{{ form.full_name.name }}">{{ form.full_name.label }}</label> {% render_field form.full_name class+="mdl-textfield__input" %}
+				<span class="">{{ form.full_name.errors }}</span>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<label class="mdl-textfield__label" for="id_{{ form.password.name }}">{{ form.password.label }}</label> {% render_field form.password class+="mdl-textfield__input" %}
+				<span class="">{{ form.password.errors }}</span>
+			</div>
+			<br />
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Update</button>
+		</form>
+		<hr>
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--red-800 mdl-color-text--white">
+			Delete
+			</button>
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-400 mdl-color-text--white">
 			Change Password
 			</button>
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-800 mdl-color-text--white">
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-800 mdl-color-text--white">
 			Reset Password
 			</button>
-		</div>
-	</section>
+	</div>
+</section>
 {% endblock %}

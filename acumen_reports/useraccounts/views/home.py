@@ -1,5 +1,6 @@
-from django.contrib.auth import views
+from django.contrib.auth import views as auth_views
 
-class HomePage(views.TemplateView):
+
+class HomePage(auth_views.TemplateView):
     template_name = 'index.html'
     pass
