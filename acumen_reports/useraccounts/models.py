@@ -14,6 +14,11 @@ class UserProject(models.Model):
     def __str__(self):
         return self.name
 
+# Derive every integration authentication model from this model, ex:
+# class AnalyticsAuth(ProfileAuth):
+#     auth_token = models.CharField(max_length=150)
+class ProfileAuth(models.Model):
+    pass
 
 class ProjectProfile(models.Model):
     # TODO: Remove hard coded integration types
@@ -29,6 +34,7 @@ class ProjectProfile(models.Model):
     project = models.ForeignKey(UserProject, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
     created_date = models.DateTimeField(auto_now_add=True)
+    auth = models.ForeignKey(ProfileAuth, on_delete=models.CASCADE)
     integration_type = models.CharField(
         max_length=2, choices=INTEGRATION_CHOICES, default='00')
 

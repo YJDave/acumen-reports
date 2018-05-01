@@ -18,15 +18,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ProjectProfile',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=250)),
-                ('created_date', models.DateTimeField(auto_now_add=True)),
-                ('integration_type', models.CharField(choices=[('00', 'Google analytics'), ('01', 'Google search console')], default='00', max_length=2)),
-            ],
-        ),
-        migrations.CreateModel(
             name='ProjectReport',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
@@ -47,11 +38,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='projectreport',
-            name='project',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='useraccounts.UserProject'),
-        ),
-        migrations.AddField(
-            model_name='projectprofile',
             name='project',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='useraccounts.UserProject'),
         ),
