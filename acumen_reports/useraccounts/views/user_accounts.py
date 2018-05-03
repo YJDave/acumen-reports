@@ -21,7 +21,10 @@ class UserSettings(generic_views.UpdateView):
     model = User
     template_name = "useraccounts/user-settings.html"
     form_class = forms.UserSettingsForm
-    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        return reverse_lazy('user_settings', kwargs={
+            'user_name': self.object.username})
 
     def get_form_kwargs(self, *args, **kwargs):
         form_kwargs = super().get_form_kwargs(*args, **kwargs)

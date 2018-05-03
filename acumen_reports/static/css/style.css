@@ -1,11 +1,13 @@
 #register-btn {
   margin-right: 10px;
 }
-dialog {
-  width: 50%;
-  border: none;
+
+#msg-dialog-box {
+  height: auto;
+  width: 200%;
 }
-.allauth{
+
+.allauth {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -25,14 +27,14 @@ a {
 }*/
 
 #the-sticky-btn {
-      position: sticky;
-      display: block;
-      right: 0;
-      bottom: 20px;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-      background-color: transparent;
+  position: sticky;
+  display: block;
+  right: 0;
+  bottom: 20px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 900;
+  background-color: transparent;
 }
 
 #navbar {
@@ -40,10 +42,13 @@ a {
   background-color: #263338;
   width: 100%;
 }
+
 /* stubborn left and right buttons that won't change color!*/
-.mdl-layout__tab-bar-left-button,.mdl-layout__tab-bar-right-button, .mdl-layout__tab-bar, .mdl-layout__header{
+
+.mdl-layout__tab-bar-left-button, .mdl-layout__tab-bar-right-button, .mdl-layout__tab-bar, .mdl-layout__header {
   background-color: #37474F;
 }
+
 /* Side navigation bar  */
 
 .demo-drawer {
@@ -73,8 +78,8 @@ a {
 
 .demo-navigation {
   -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .demo-layout .demo-navigation .mdl-navigation__link {
@@ -108,6 +113,7 @@ a {
 /* Main Content */
 
 /* Report Create */
+
 .demo-content {
   max-width: 1080px;
 }
@@ -117,62 +123,69 @@ a {
   width: 490px;
 }
 
-.demo-card-wide > .mdl-card__title {
+.demo-card-wide>.mdl-card__title {
   min-height: 100px;
   color: #fff;
   height: auto;
-  background-color:#37474F;
+  background-color: #37474F;
   font-weight: 500;
 }
 
-.demo-card-wide > .mdl-card__menu {
+.demo-card-wide>.mdl-card__menu {
   color: #fff;
 }
 
 /* User Settings*/
-.profile-section{
+
+.profile-section {
   margin-top: 40px !important;
   width: 50%;
   margin: auto;
   text-align: center;
 }
-.profile-section .mdl-textfield__input{
-    font-size: 18px ;
 
-  }
+.profile-section .mdl-textfield__input {
+  font-size: 18px;
+}
 
-.profile-section .mdl-textfield__label{
+.profile-section .mdl-textfield__label {
   font-size: 18px;
 }
 
 /* Projects */
-.project{
-  
-}
+
+.project {}
+
 /* Reports */
-.report-section{
+
+.report-section {
   background-color: #263338;
- }
+}
 
-.report-settings .mdl-textfield{
+.report-settings .mdl-textfield {
   width: 100%;
- }
+}
 
- /* Profile */
-.profile-chips{
+/* Profile */
+
+.profile-chips {
   margin-left: 100px;
   margin-bottom: 20px;
 }
-.profiles > .img {
+
+.profiles>.img {
   width: 50px;
   height: 50px;
 }
+
 /* Footer */
+
 .mdl-mini-footer {
   position: absolute;
   top: 100%;
-  bottom:0;
+  bottom: 0;
   /*left: 0;*/
   width: 97.6%;
-  height:20px;   /* Height of the footer */
+  height: 20px;
+  /* Height of the footer */
 }

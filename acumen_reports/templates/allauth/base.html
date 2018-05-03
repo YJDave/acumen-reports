@@ -1,22 +1,13 @@
 {% extends 'index.html' %} {% block main_content %}
 <div class="demo-layout mdl-layout">
     <main class="allauth mdl-layout__content mdl-color--grey-100">
-        <dialog class="mdl-shadow--6dp" open>
+        <dialog class="mdl-dialog " open>
             <a href="{% url 'home' %}">
         <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
         <i class="material-icons">close</i>
       </button></a>
             <div class="demo-content">
-                {% if messages %}
-                <div>
-                    <strong>Messages:</strong>
-                    <ul>
-                        {% for message in messages %}
-                        <li>{{message}}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %} {% block content %} {% endblock %}
+                {% block content %} {% endblock %}
             </div>
         </dialog>
 </div>

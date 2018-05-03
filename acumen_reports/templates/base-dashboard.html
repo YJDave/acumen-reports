@@ -15,6 +15,22 @@
                 </div>
             </div>
         </div>
+        {% if messages %}
+        <dialog class="mdl-dialog" open id="msg-dialog-box">
+            <div class="mdl-dialog__actions">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab close">
+     <i class="material-icons">close</i>
+   </button>
+            </div>
+            <div class="mdl-dialog__content">
+                {% for message in messages %}
+                <ul>{{message}}</ul>
+                {% endfor %}
+            </div>
+        </dialog>
+        <script src="{% static 'js/dialog-polyfill.js'%}"></script>
+        <script src="{% static 'js/dialog_close.js' %}"></script>
+        {% endif %}
     </header>
     <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
@@ -44,21 +60,12 @@
             <a class="mdl-navigation__link" href="{% url 'account_logout' %}"><i class="material-icons">power_settings_new</i>Logout</a>
         </nav>
     </div>
-    {% endblock %} {% block main_content %}
+    {% endblock %}{% block main_content %}
     <main class="mdl-layout__content mdl-color--grey-100">
-        {% if messages %}
-        <div>
-            <strong>Messages:</strong>
-            <ul>
-                {% for message in messages %}
-                <li>{{message}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
         <div class="mdl-grid demo-content">
             {% block sub_content %} {% endblock %}
         </div>
+
     </main>
 </div>
 {% endblock %}
