@@ -6,17 +6,25 @@
     </div>
 </div>
 <div class="mdl-cell mdl-cell--12-col">
+
+    {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+    <ul>
+        {{error}}
+    </ul>
+    {% endfor%} {% endif %}
+
     <form class="profile-section" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="{{ form.login.id_for_label }}">Username or email</label> {% render_field form.login class+="mdl-textfield__input" placeholder=''%}
             <span class="">{{ form.login.errors }}</span>
         </div>
+        <br />
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <label class="mdl-textfield__label" for="{{ form.password.id_for_label }}">{{ form.password.label }}</label> {% render_field form.password class+="mdl-textfield__input" placeholder=''%}
             <span class="">{{ form.password.errors }}</span>
         </div>
-        {% if redirect_field_value %}
+        <br /> {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" /> {% endif %}
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
         mdl-color--grey-100 mdl-color-text--grey-800" type="submit">{% trans "Sign In" %}</button>

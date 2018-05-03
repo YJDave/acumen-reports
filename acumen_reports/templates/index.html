@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles %} {% load humanize %}
 <!DOCTYPE html>
 <html>
 
@@ -7,8 +7,7 @@
         <link rel="stylesheet" href='{% static "mdl/material.min.css" %}'>
         <script src='{% static "mdl/material.min.js" %}'></script>
         <link rel="stylesheet" href='{% static "mdl/material-icons.css" %}'>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/dialog-polyfill.css' %}" />
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.2/dialog-polyfill.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/dialog-polyfill.css' %}" /> {% block extra_script %}{% endblock %}
     </head>
     <link rel="stylesheet" href='{% static "css/style.css" %}'>
     </head>

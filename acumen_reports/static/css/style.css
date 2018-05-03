@@ -2,9 +2,18 @@
   margin-right: 10px;
 }
 
+#show_btn, #hide_btn {
+  float: right;
+  position: sticky;
+}
+
 #msg-dialog-box {
   height: auto;
-  width: 200%;
+  width: 50%;
+}
+
+.mdl-dialog {
+  width: 50%;
 }
 
 .allauth {

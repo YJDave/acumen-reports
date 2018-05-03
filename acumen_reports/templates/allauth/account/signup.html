@@ -1,4 +1,27 @@
-{% extends "account/base.html" %} {% load widget_tweaks %} {% load i18n %} {% block head_title %}{% trans "Register" %}{% endblock %} {% block content %}
+{% extends "account/base.html" %} {% load widget_tweaks %} {% load staticfiles %} {% load i18n %} {% block extra_script %}
+<script type="text/javascript">
+	function showPassword() {
+		var x = document.getElementById("id_password");
+		var showButton = document.getElementById("show_btn");
+		var hideButton = document.getElementById("hide_btn");
+
+		x.type = "text";
+		showButton.classList.add("hidden");
+		hideButton.classList.remove("hidden");
+	}
+
+	function hidePassword() {
+		var x = document.getElementById("id_password");
+		var showButton = document.getElementById("show_btn");
+		var hideButton = document.getElementById("hide_btn");
+
+		x.type = "password";
+		showButton.classList.remove("hidden");
+		hideButton.classList.add("hidden");
+	}
+
+</script> {% endblock %} {% block head_title %} {% trans "Register" %}{% endblock %} {% block content %}
+
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 	<div class="mdl-tabs__tab-bar">
 		<a href="{% url 'account_signup' %}" class="mdl-tabs__tab is-active">Register</a>
@@ -6,30 +29,47 @@
 	</div>
 </div>
 <div class="mdl-cell mdl-cell--12-col">
-	<form class="" id="signup_form" method="post" action="{% url 'account_signup' %}">
+
+	{% if form.non_field_errors %} {% for error in form.non_field_errors %}
+	<ul>
+		{{error}}
+	</ul>
+	{% endfor%} {% endif %}
+
+	<form class="profile-section" id="signup_form" method="post" action="{% url 'account_signup' %}">
 		{% csrf_token %}
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			<label class="mdl-textfield__label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label> {% render_field form.username class+="mdl-textfield__input" %}
 			<span class="">{{ form.username.errors }}</span>
 		</div>
+		<br />
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			<label class="mdl-textfield__label" for="{{ form.email.id_for_label }}">{{ form.email.label }}</label> {% render_field form.email class+="mdl-textfield__input" %}
 			<span class="">{{ form.email.errors }}</span>
 		</div>
+		<br />
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			<label class="mdl-textfield__label" for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label> {% render_field form.phone class+="mdl-textfield__input" %}
 			<span class="">{{ form.phone.errors }}</span>
 		</div>
+		<br />
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			<label class="mdl-textfield__label" for="{{ form.password.id_for_label }}">{{ form.password.label }}</label> {% render_field form.password class+="mdl-textfield__input" %}
+			<button type="button" id="show_btn" class="mdl-button mdl-js-button mdl-button--icon" onclick="showPassword()">
+				<i class="material-icons">visibility</i>
+			</button>
+			<button type="button" id="hide_btn" class="mdl-button mdl-js-button mdl-button--icon hidden" onclick="hidePassword()">
+				<i class="material-icons">visibility_off</i>
+			</button>
 			<span class="">{{ form.password.errors }}</span>
 		</div>
+
+		<br />
 		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			<label class="mdl-textfield__label" for="{{ form.full_name.id_for_label }}">{{ form.full_name.label }}</label> {% render_field form.full_name class+="mdl-textfield__input" %}
 			<span class="">{{ form.full_name.errors }}</span>
 		</div>
-		<!-- 	{{ form.as_p }} -->
-		{% if redirect_field_value %}
+		<br /> {% if redirect_field_value %}
 		<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" /> {% endif %}
 		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
 				mdl-color--grey-100 mdl-color-text--grey-800" type="submit">{% trans "Register" %}</button>
