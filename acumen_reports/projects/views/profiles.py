@@ -1,12 +1,12 @@
 from django.contrib.auth import views
 
+# Profile views
 
 class CreateProfile(views.TemplateView):
     template_name = "profiles/create.html"
     pass
 
-
-class ProjectProfileDashboard(views.TemplateView):
+class ProfileDashboard(views.TemplateView):
     template_name = "profiles/dashboard.html"
     pass
 
@@ -16,6 +16,6 @@ class ProfileReports(views.TemplateView):
     pass
 
 
-class ListAllProjectProfiles(views.TemplateView):
-    template_name = "profiles/all-project-profiles.html"
+class ListAllProfiles(views.TemplateView):
+    template_name = "profiles/all-profiles.html"
     pass

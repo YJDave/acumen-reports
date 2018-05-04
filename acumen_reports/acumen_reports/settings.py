@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'analytics',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'multi_email_field',
     'useraccounts',
+    'projects',
+    'reports',
+    'integrations',
 ]
 
 MIDDLEWARE = [

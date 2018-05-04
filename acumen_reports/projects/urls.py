@@ -1,13 +1,34 @@
 from django.conf.urls import url, include
 
-from .views import (
-	CreateProject,
-	ListAllProjects,
-	ProjectDashboard,
-	ProjectHistory,
-	ProjectReports,
-	ProjectSettings,
+from .views.projects import (
+    CreateProject,
+    ListAllProjects,
+    ProjectDashboard,
+    ProjectHistory,
+    ProjectReports,
+    ProjectSettings,
 )
+
+from .views.profiles import (
+    CreateProfile,
+    ProfileDashboard,
+    ProfileReports,
+    ListAllProfiles,
+)
+
+
+profile_urls = [
+    url(r'^$', ProfileDashboard.as_view(),
+        name='profile_dashboard'),
+    url(r'^reports/$', ProfileReports.as_view(), name='profile_reports'),
+]
+
+main_profile_urls = [
+    url(r'^$', ListAllProfiles.as_view(), name='all_profiles'),
+    url(r'^create/$', CreateProfile.as_view(), name='create_profile'),
+    url(r'^create/', include('integrations.urls')),
+    url(r'^(?P<profile_id>\d+)/', include(profile_urls)),
+]
 
 # TODO: History of project, profile, report will list
 # all past events or user actions of particular project,
@@ -25,7 +46,7 @@ project_urls = [
     url(r'^reports/$', ProjectReports.as_view(), name='project_reports'),
     url(r'^history/$', ProjectHistory.as_view(), name='project_history'),
 
-    url(r'^profiles/', include('profiles.urls')),
+    url(r'^profiles/', include(main_profile_urls)),
 ]
 
 urlpatterns = [

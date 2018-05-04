@@ -1,5 +1,7 @@
 from django.contrib.auth import views
 
+# Project views
+
 class ProjectDashboard(views.TemplateView):
     template_name = "projects/dashboard.html"
     pass

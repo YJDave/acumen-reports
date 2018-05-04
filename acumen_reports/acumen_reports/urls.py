@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from django.contrib import admin
-from useraccounts.views import HomePage
+from useraccounts.views.home import HomePage
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
