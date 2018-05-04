@@ -1,14 +1,16 @@
 {% extends 'index.html' %} {% block main_content %}
-<div class="demo-layout mdl-layout">
+<div class="demo-layout mdl-layout mdl-js-layout">
     <main class="allauth mdl-layout__content mdl-color--grey-100">
-        <dialog class="mdl-dialog " open>
+        <dialog class="mdl-dialog" open>
             <a href="{% url 'home' %}">
-        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
-        <i class="material-icons">close</i>
-      </button></a>
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">
+                <i class="material-icons">close</i>
+              </button>
+            </a>
             <div class="demo-content">
                 {% block content %} {% endblock %}
             </div>
         </dialog>
+    </main>
 </div>
 {% endblock %}
