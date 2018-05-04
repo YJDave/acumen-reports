@@ -1,11 +1,10 @@
-import acumen_reports.generics as generic_views
-
-from django.contrib.auth import views as auth_views
-from . import forms
-from allauth.account import views as allauth_views
-from django.contrib import messages
-from .models import User
 from django.core.urlresolvers import reverse_lazy
+from django.contrib import messages
+from acumen_reports import generics as generic_views
+from django.contrib.auth import views as auth_views
+from allauth.account import views as allauth_views
+from useraccounts.models import User
+from useraccounts import forms
 
 
 class RegisterView(allauth_views.SignupView):
