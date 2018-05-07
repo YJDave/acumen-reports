@@ -76,8 +76,7 @@ class RegisterForm(forms.ModelForm):
             except NumberParseException:
                 raise forms.ValidationError(
                     "Please enter a valid country code.")
-        else:
-            phone = None
+
         return phone
 
     def save(self, *args, **kwargs):
@@ -137,8 +136,6 @@ class UserSettingsForm(forms.ModelForm):
             except NumberParseException:
                 raise forms.ValidationError(
                     ("Please enter a valid country code."))
-        else:
-            phone = None
 
         return phone
 

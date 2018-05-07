@@ -1,5 +1,10 @@
-#register-btn {
+.space-btn {
   margin-right: 10px;
+}
+
+.socialaccount_provider {
+  margin-left: 30%;
+  margin-bottom: 10px;
 }
 
 #show_btn, #hide_btn {

@@ -34,18 +34,19 @@
 				<span class="">{{ form.password.errors }}</span>
 			</div>
 			<br />
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Update</button>
+			<button class="space-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">Update</button>
 		</form>
 		<hr>
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--red-800 mdl-color-text--white">
+		<button class="space-btn mdl-button mdl-js-button mdl-button--raised mdl-color--red-800 mdl-color-text--white">
 			Delete
-			</button>
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-400 mdl-color-text--white">
+		</button>
+
+		<a href="{% url 'account_change_password' %}" class="space-btn mdl-button mdl-js-button mdl-button--raised mdl-color--green-400 mdl-color-text--white">
 			Change Password
-			</button>
-		<button class="mdl-button mdl-js-button mdl-button--raised mdl-color--green-800 mdl-color-text--white">
+		</a>
+		<a href="{% url 'account_reset_password' %}" class="space-btn mdl-button mdl-js-button mdl-button--raised mdl-color--green-800 mdl-color-text--white ">
 			Reset Password
-			</button>
+		</a>
 	</div>
 </section>
 {% endblock %}

@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
     'widget_tweaks',
 ]
 
@@ -159,3 +161,10 @@ ACCOUNT_FORMS = {
 
 }
 DEFAULT_FROM_EMAIL = 'testing@example.com'
+
+GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = os.path.join(
+    BASE_DIR, 'acumen_reports/client_secret.json')
+
+SOCIALACCOUNT_QUERY_EMAIL = True
+SOCIALACCOUNT_AUTO_SIGNUP = True
+ACCOUNT_SESSION_REMEMBER = True
