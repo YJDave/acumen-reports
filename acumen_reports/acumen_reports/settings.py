@@ -162,7 +162,4 @@ ACCOUNT_FORMS = {
 }
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 
-GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = os.path.join(
-    BASE_DIR, 'acumen_reports/client_secret.json')
-
 SOCIALACCOUNT_QUERY_EMAIL = True

@@ -1,5 +1,7 @@
 from django.contrib.auth import views
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class AnalyticsSetup(views.TemplateView):
-	template_name = 'analytics/setup.html'
-	pass
+
+class AnalyticsSetup(LoginRequiredMixin, views.TemplateView):
+    template_name = 'analytics/setup.html'
+    pass

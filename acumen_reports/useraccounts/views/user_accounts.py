@@ -1,7 +1,7 @@
+import django.views.generic as base
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse_lazy
 from django.contrib import messages
-from acumen_reports import generics as generic_views
-from django.contrib.auth import views as auth_views
 from allauth.account import views as allauth_views
 from useraccounts.models import User
 from useraccounts import forms
@@ -11,12 +11,12 @@ class RegisterView(allauth_views.SignupView):
     form_class = forms.RegisterForm
 
 
-class UserDashboard(generic_views.TemplateView):
+class UserDashboard(LoginRequiredMixin, base.TemplateView):
     template_name = "useraccounts/user-dashboard.html"
     pass
 
 
-class UserSettings(generic_views.UpdateView):
+class UserSettings(LoginRequiredMixin, base.UpdateView):
     model = User
     template_name = "useraccounts/user-settings.html"
     form_class = forms.UserSettingsForm

@@ -1,21 +1,23 @@
 from django.contrib.auth import views
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Profile views
 
-class CreateProfile(views.TemplateView):
+
+class CreateProfile(LoginRequiredMixin, views.TemplateView):
     template_name = "profiles/create.html"
     pass
 
-class ProfileDashboard(views.TemplateView):
+
+class ProfileDashboard(LoginRequiredMixin, views.TemplateView):
     template_name = "profiles/dashboard.html"
     pass
 
 
-class ProfileReports(views.TemplateView):
+class ProfileReports(LoginRequiredMixin, views.TemplateView):
     template_name = "profiles/all-reports.html"
     pass
 
 
-class ListAllProfiles(views.TemplateView):
+class ListAllProfiles(LoginRequiredMixin, views.TemplateView):
     template_name = "profiles/all-profiles.html"
     pass

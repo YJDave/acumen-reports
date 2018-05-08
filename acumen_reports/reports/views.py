@@ -1,21 +1,27 @@
 from django.contrib.auth import views
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-class ListAllReports(views.TemplateView):
+
+class ListAllReports(LoginRequiredMixin, views.TemplateView):
     template_name = "reports/all-reports.html"
     pass
 
-class ReportDashboard(views.TemplateView):
+
+class ReportDashboard(LoginRequiredMixin, views.TemplateView):
     template_name = "reports/dashboard.html"
     pass
 
-class ReportsHistory(views.TemplateView):
+
+class ReportsHistory(LoginRequiredMixin, views.TemplateView):
     template_name = "reports/all-history.html"
     pass
 
-class CreateReport(views.TemplateView):
+
+class CreateReport(LoginRequiredMixin, views.TemplateView):
     template_name = "reports/create.html"
     pass
 
-class ReportSetting(views.TemplateView):
+
+class ReportSetting(LoginRequiredMixin, views.TemplateView):
     template_name = "reports/settings.html"
     pass
