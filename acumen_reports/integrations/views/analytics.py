@@ -64,7 +64,6 @@ class AuthReturn(LoginRequiredMixin, base.RedirectView):
                                        request.GET['state'].encode('utf-8'),
                                        user):
             return HttpResponseBadRequest()
-        print("here")
         FLOW = FlowModel.objects.get(id=request.user).flow
         credential = FLOW.step2_exchange(request.GET)
         storage = DjangoORMStorage(
