@@ -1,17 +1,16 @@
-{% extends 'base-dashboard.html' %}
-{% block sub_content %}
-	<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="navbar">
-		<a href="/user_id/reports/" class="mdl-layout__tab is-active">Reports</a>
-		<a href="/user_id/reports/history/" class="mdl-layout__tab">History</a>
-		<a href="/user_id/reports/create/" class="mdl-layout__tab">Add new report</a>
-	</div>
+{% extends 'base-dashboard.html' %} {% block sub_content %}
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="navbar">
+	<a href="/user_id/reports/" class="mdl-layout__tab is-active">Reports</a>
+	<a href="/user_id/reports/history/" class="mdl-layout__tab">History</a>
+	<a href="/user_id/reports/create/" class="mdl-layout__tab">Add new report</a>
+</div>
+<section class="mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	<div class="demo-card-wide mdl-card mdl-shadow--2dp">
 		<div class="mdl-card__title" style="background-color: rgb(23,2,32);">
 			<h2 class="mdl-card__title-text">Google Analytics Everyday Report</h2>
 		</div>
 		<div class="mdl-card__supporting-text">
-			<h4 class="mdl-card__subtitle-text">Project XYZ</h4>
-			Description of report, etc. etc.
+			<h4 class="mdl-card__subtitle-text">Project XYZ</h4> Description of report, etc. etc.
 		</div>
 		<div class="mdl-card__actions mdl-card--border">
 			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/user_id/reports/12">
@@ -34,8 +33,7 @@
 			<h2 class="mdl-card__title-text">Search Console Monthly Admin Report</h2>
 		</div>
 		<div class="mdl-card__supporting-text">
-			<h4 class="mdl-card__subtitle-text">Project ABc</h4>
-			Description alskdm asldkfm alkscm asdklfj alksdfm lk
+			<h4 class="mdl-card__subtitle-text">Project ABc</h4> Description alskdm asldkfm alkscm asdklfj alksdfm lk
 		</div>
 		<div class="mdl-card__actions mdl-card--border">
 			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/user_id/reports/12">
@@ -53,5 +51,5 @@
 			</ul>
 		</div>
 	</div>
-
+</section>
 {% endblock %}
