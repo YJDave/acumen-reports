@@ -60,24 +60,11 @@
             <a class="mdl-navigation__link" href="{% url 'account_logout' %}"><i class="material-icons">power_settings_new</i>Logout</a>
         </nav>
     </div>
-    {% endblock %}{% block main_content %}
+    {% endblock %} {% block main_content %}
     <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="wrapper">
-            <div class="mdl-grid demo-content">
-                {% block sub_content %} {% endblock %}
-            </div>
+        <div class="mdl-grid demo-content">
+            {% block sub_content %} {% endblock %}
         </div>
-        <footer class="dashboard-footer mdl-mini-footer">
-            <div class="mdl-mini-footer__left-section">
-                <div class="mdl-logo">Acumen reports</div>
-            </div>
-            <div class="mdl-mini-footer__right-section">
-                <ul class="mdl-mini-footer__link-list">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Privacy & Terms</a></li>
-                </ul>
-            </div>
-        </footer>
     </main>
 </div>
 {% endblock %}

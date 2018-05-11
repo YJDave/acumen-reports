@@ -153,10 +153,9 @@ a {
 /* User Settings*/
 
 .profile-section {
-  margin-top: 40px !important;
   width: 50%;
-  margin: auto;
   text-align: center;
+  margin: 25px auto 25px auto;
 }
 
 .profile-section .mdl-textfield__input {
