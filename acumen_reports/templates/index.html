@@ -80,8 +80,8 @@
                 </dialog>
                 <script src="{% static 'js/dialog-polyfill.js' %}"></script>
                 <script src="{% static 'js/dialog_close.js' %}"></script>
-                {% endif %} {% endblock %} {% block main_content %}
-                <footer class="homepage-footer mdl-mini-footer">
+                {% endif %} {% endblock %} {% block main_content %} {% endblock %}
+                <footer class="mdl-mini-footer">
                     <div class="mdl-mini-footer__left-section">
                         <div class="mdl-logo">Acumen reports</div>
                     </div>
@@ -91,7 +91,7 @@
                             <li><a href="#">Privacy & Terms</a></li>
                         </ul>
                     </div>
-                </footer> {% endblock %}
+                </footer>
             </main>
         </div>
     </body>

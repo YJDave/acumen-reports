@@ -194,7 +194,7 @@ a {
 
 /* Footer */
 
-.homepage-footer {
+.mdl-mini-footer {
   position: absolute;
   top: 100%;
   bottom: 0;
@@ -202,16 +202,4 @@ a {
   width: 97.6%;
   height: 20px;
   /* Height of the footer */
-}
-
-.dashboard-footer {
-  width: 97.6%;
-  height: 20px;
-  position: absolute;
-  /* bottom: 0; */
-}
-
-.wrapper {
-  position: relative;
-  min-height: 100%;
 }
